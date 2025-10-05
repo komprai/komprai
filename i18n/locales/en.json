@@ -1,0 +1,22 @@
+{
+  "search": {
+    "hero": {
+      "komprai": "komprai",
+      "find": "find",
+      "compare": "compare",
+      "buy": "and buy!"
+    },
+    "request": {
+      "thinking": "Thingking..."
+    },
+    "input": {
+      "placeholder": "Type product or some store name..."
+    },
+    "actions": {
+      "search": "Find"
+    },
+    "response": {
+      "sponsored": "sponsored"
+    }
+  }
+}

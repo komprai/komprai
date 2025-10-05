@@ -31,3 +31,5 @@ export { setInterval } from '#app/compat/interval';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
 export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration';
 export { useImage } from '../node_modules/@nuxt/image/dist/runtime/composables';
+export { useI18n } from '../node_modules/vue-i18n/dist/vue-i18n';
+export { useRouteBaseName, useLocalePath, useLocaleRoute, useSwitchLocalePath, useLocaleHead, useBrowserLocale, useCookieLocale, useSetI18nParams, useI18nPreloadKeys, defineI18nRoute, defineI18nLocale, defineI18nConfig } from '../node_modules/@nuxtjs/i18n/dist/runtime/composables/index';

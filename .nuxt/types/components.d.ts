@@ -25,6 +25,15 @@ interface _GlobalComponents {
     'CarouselPrevious': typeof import("../../app/components/ui/carousel/index")['CarouselPrevious']
     'CarouselInterface': typeof import("../../app/components/ui/carousel/interface")['default']
     'CarouselUseCarousel': typeof import("../../app/components/ui/carousel/useCarousel")['default']
+    'Drawer': typeof import("../../app/components/ui/drawer/index")['Drawer']
+    'DrawerClose': typeof import("../../app/components/ui/drawer/index")['DrawerClose']
+    'DrawerContent': typeof import("../../app/components/ui/drawer/index")['DrawerContent']
+    'DrawerDescription': typeof import("../../app/components/ui/drawer/index")['DrawerDescription']
+    'DrawerFooter': typeof import("../../app/components/ui/drawer/index")['DrawerFooter']
+    'DrawerHeader': typeof import("../../app/components/ui/drawer/index")['DrawerHeader']
+    'DrawerOverlay': typeof import("../../app/components/ui/drawer/index")['DrawerOverlay']
+    'DrawerTitle': typeof import("../../app/components/ui/drawer/index")['DrawerTitle']
+    'DrawerTrigger': typeof import("../../app/components/ui/drawer/index")['DrawerTrigger']
     'DropdownMenu': typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenu']
     'DropdownMenuCheckboxItem': typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuCheckboxItem']
     'DropdownMenuContent': typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuContent']
@@ -44,6 +53,9 @@ interface _GlobalComponents {
     'GlowBorder': typeof import("../../app/components/ui/glow-border/index")['GlowBorder']
     'GradientButton': typeof import("../../app/components/ui/gradient-button/index")['GradientButton']
     'HaloSearch': typeof import("../../app/components/ui/halo-search/index")['HaloSearch']
+    'Marquee': typeof import("../../app/components/ui/marquee/index")['Marquee']
+    'MarqueeReviewCard': typeof import("../../app/components/ui/marquee/ReviewCard.vue")['default']
+    'MorphingTabs': typeof import("../../app/components/ui/morphing-tabs/index")['MorphingTabs']
     'MorphingText': typeof import("../../app/components/ui/morphing-text/index")['MorphingText']
     'NavigationMenu': typeof import("../../app/components/ui/navigation-menu/index")['NavigationMenu']
     'NavigationMenuContent': typeof import("../../app/components/ui/navigation-menu/index")['NavigationMenuContent']
@@ -54,6 +66,7 @@ interface _GlobalComponents {
     'NavigationMenuTrigger': typeof import("../../app/components/ui/navigation-menu/index")['NavigationMenuTrigger']
     'NavigationMenuViewport': typeof import("../../app/components/ui/navigation-menu/index")['NavigationMenuViewport']
     'NeonBorder': typeof import("../../app/components/ui/neon-border/index")['NeonBorder']
+    'NumberTicker': typeof import("../../app/components/ui/number-ticker/index")['NumberTicker']
     'Pagination': typeof import("../../app/components/ui/pagination/index")['Pagination']
     'PaginationContent': typeof import("../../app/components/ui/pagination/index")['PaginationContent']
     'PaginationEllipsis': typeof import("../../app/components/ui/pagination/index")['PaginationEllipsis']
@@ -62,11 +75,14 @@ interface _GlobalComponents {
     'PaginationLast': typeof import("../../app/components/ui/pagination/index")['PaginationLast']
     'PaginationNext': typeof import("../../app/components/ui/pagination/index")['PaginationNext']
     'PaginationPrevious': typeof import("../../app/components/ui/pagination/index")['PaginationPrevious']
+    'RadiantText': typeof import("../../app/components/ui/radiant-text/index")['RadiantText']
     'Separator': typeof import("../../app/components/ui/separator/index")['Separator']
     'Skeleton': typeof import("../../app/components/ui/skeleton/index")['Skeleton']
     'SparklesText': typeof import("../../app/components/ui/sparkles-text/index")['SparklesText']
     'VanishingInput': typeof import("../../app/components/ui/vanishing-input/index")['VanishingInput']
-    'LayoutHeader': typeof import("../../app/components/layout/header.vue")['default']
+    'AutoScroll': typeof import("../../app/components/auto-scroll/index.vue")['default']
+    'SeachPlaceholder': typeof import("../../app/components/seach-placeholder/index.vue")['default']
+    'SearchResponse': typeof import("../../app/components/search-response/index.vue")['default']
     'Search': typeof import("../../app/components/search/index.vue")['default']
     'NuxtWelcome': typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -83,6 +99,8 @@ interface _GlobalComponents {
     'CarouselApi': typeof import("../../app/components/ui/carousel/index")['CarouselApi']
     'DropdownMenuPortal': typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']
     'Icon': typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
+    'NuxtLinkLocale': typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
+    'SwitchLocalePathLink': typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
     'NuxtPage': typeof import("../../node_modules/nuxt/dist/pages/runtime/page")['default']
     'NoScript': typeof import("../../node_modules/nuxt/dist/head/runtime/components")['NoScript']
     'Link': typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Link']
@@ -106,6 +124,15 @@ interface _GlobalComponents {
     'LazyCarouselPrevious': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselPrevious']>
     'LazyCarouselInterface': LazyComponent<typeof import("../../app/components/ui/carousel/interface")['default']>
     'LazyCarouselUseCarousel': LazyComponent<typeof import("../../app/components/ui/carousel/useCarousel")['default']>
+    'LazyDrawer': LazyComponent<typeof import("../../app/components/ui/drawer/index")['Drawer']>
+    'LazyDrawerClose': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerClose']>
+    'LazyDrawerContent': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerContent']>
+    'LazyDrawerDescription': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerDescription']>
+    'LazyDrawerFooter': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerFooter']>
+    'LazyDrawerHeader': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerHeader']>
+    'LazyDrawerOverlay': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerOverlay']>
+    'LazyDrawerTitle': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerTitle']>
+    'LazyDrawerTrigger': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerTrigger']>
     'LazyDropdownMenu': LazyComponent<typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenu']>
     'LazyDropdownMenuCheckboxItem': LazyComponent<typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuCheckboxItem']>
     'LazyDropdownMenuContent': LazyComponent<typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuContent']>
@@ -125,6 +152,9 @@ interface _GlobalComponents {
     'LazyGlowBorder': LazyComponent<typeof import("../../app/components/ui/glow-border/index")['GlowBorder']>
     'LazyGradientButton': LazyComponent<typeof import("../../app/components/ui/gradient-button/index")['GradientButton']>
     'LazyHaloSearch': LazyComponent<typeof import("../../app/components/ui/halo-search/index")['HaloSearch']>
+    'LazyMarquee': LazyComponent<typeof import("../../app/components/ui/marquee/index")['Marquee']>
+    'LazyMarqueeReviewCard': LazyComponent<typeof import("../../app/components/ui/marquee/ReviewCard.vue")['default']>
+    'LazyMorphingTabs': LazyComponent<typeof import("../../app/components/ui/morphing-tabs/index")['MorphingTabs']>
     'LazyMorphingText': LazyComponent<typeof import("../../app/components/ui/morphing-text/index")['MorphingText']>
     'LazyNavigationMenu': LazyComponent<typeof import("../../app/components/ui/navigation-menu/index")['NavigationMenu']>
     'LazyNavigationMenuContent': LazyComponent<typeof import("../../app/components/ui/navigation-menu/index")['NavigationMenuContent']>
@@ -135,6 +165,7 @@ interface _GlobalComponents {
     'LazyNavigationMenuTrigger': LazyComponent<typeof import("../../app/components/ui/navigation-menu/index")['NavigationMenuTrigger']>
     'LazyNavigationMenuViewport': LazyComponent<typeof import("../../app/components/ui/navigation-menu/index")['NavigationMenuViewport']>
     'LazyNeonBorder': LazyComponent<typeof import("../../app/components/ui/neon-border/index")['NeonBorder']>
+    'LazyNumberTicker': LazyComponent<typeof import("../../app/components/ui/number-ticker/index")['NumberTicker']>
     'LazyPagination': LazyComponent<typeof import("../../app/components/ui/pagination/index")['Pagination']>
     'LazyPaginationContent': LazyComponent<typeof import("../../app/components/ui/pagination/index")['PaginationContent']>
     'LazyPaginationEllipsis': LazyComponent<typeof import("../../app/components/ui/pagination/index")['PaginationEllipsis']>
@@ -143,11 +174,14 @@ interface _GlobalComponents {
     'LazyPaginationLast': LazyComponent<typeof import("../../app/components/ui/pagination/index")['PaginationLast']>
     'LazyPaginationNext': LazyComponent<typeof import("../../app/components/ui/pagination/index")['PaginationNext']>
     'LazyPaginationPrevious': LazyComponent<typeof import("../../app/components/ui/pagination/index")['PaginationPrevious']>
+    'LazyRadiantText': LazyComponent<typeof import("../../app/components/ui/radiant-text/index")['RadiantText']>
     'LazySeparator': LazyComponent<typeof import("../../app/components/ui/separator/index")['Separator']>
     'LazySkeleton': LazyComponent<typeof import("../../app/components/ui/skeleton/index")['Skeleton']>
     'LazySparklesText': LazyComponent<typeof import("../../app/components/ui/sparkles-text/index")['SparklesText']>
     'LazyVanishingInput': LazyComponent<typeof import("../../app/components/ui/vanishing-input/index")['VanishingInput']>
-    'LazyLayoutHeader': LazyComponent<typeof import("../../app/components/layout/header.vue")['default']>
+    'LazyAutoScroll': LazyComponent<typeof import("../../app/components/auto-scroll/index.vue")['default']>
+    'LazySeachPlaceholder': LazyComponent<typeof import("../../app/components/seach-placeholder/index.vue")['default']>
+    'LazySearchResponse': LazyComponent<typeof import("../../app/components/search-response/index.vue")['default']>
     'LazySearch': LazyComponent<typeof import("../../app/components/search/index.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
@@ -164,6 +198,8 @@ interface _GlobalComponents {
     'LazyCarouselApi': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselApi']>
     'LazyDropdownMenuPortal': LazyComponent<typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']>
     'LazyIcon': LazyComponent<typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
+    'LazyNuxtLinkLocale': LazyComponent<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']>
+    'LazySwitchLocalePathLink': LazyComponent<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']>
     'LazyNuxtPage': LazyComponent<typeof import("../../node_modules/nuxt/dist/pages/runtime/page")['default']>
     'LazyNoScript': LazyComponent<typeof import("../../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
     'LazyLink': LazyComponent<typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Link']>

@@ -1,0 +1,19 @@
+{
+  "search": {
+    "hero": {
+      "komprai": "komprai",
+      "find": "busque",
+      "compare": "compare",
+      "buy": "e compre!"
+    },
+    "request": {
+      "thinking": "Pensando..."
+    },
+    "input": {
+      "placeholder": "Encontre algo..."
+    },
+    "actions": {
+      "search": "Pesquisar"
+    }
+  }
+}
