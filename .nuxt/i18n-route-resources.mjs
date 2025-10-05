@@ -8,13 +8,18 @@ export const pathToI18nConfig = {
     "br": "/landing",
     "en": "/landing"
   },
-  "/s/:searchId()": {
-    "br": "/s/:searchId()",
-    "en": "/s/:searchId()"
+  "/url/:id()": {
+    "br": "/url/:id()",
+    "en": "/url/:id()"
+  },
+  "/chat/:searchId()": {
+    "br": "/chat/:searchId()",
+    "en": "/chat/:searchId()"
   }
 };
 export const i18nPathToPath = {
   "/": "/",
   "/landing": "/landing",
-  "/s/:searchId()": "/s/:searchId()"
+  "/url/:id()": "/url/:id()",
+  "/chat/:searchId()": "/chat/:searchId()"
 };

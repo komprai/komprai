@@ -13,8 +13,11 @@
                     {{ t('commingsoon.description') }}
                 </AlertDescription>
             </Alert>
+
             <!-- <prse><code>{{ JSON.stringify({ chatHistory, searchId: currentSearchId }, null, 4) }}</code></pre> -->
             <SearchResponse v-for="history in chatHistory" :history="history" @done="handleResponse"></SearchResponse>
+
+            <NuxtLink to="https://kompr.ai/url/O0mR8IStXGez" v-if="chatHistory.length > 0">compartilhar</NuxtLink>
         </div>
     </AutoScroll>
 
@@ -121,7 +124,7 @@ async function search() {
 
     isSearchOpened.value = true;
 
-    window.history.pushState({}, '', `/${locale.value == 'en' ? '' : locale.value + '/'}s/${searchId.value}`);
+    window.history.pushState({}, '', `/${locale.value == 'en' ? '' : locale.value + '/'}chat/${searchId.value}`);
 
     chatHistory.value.push({
         id: v7(),

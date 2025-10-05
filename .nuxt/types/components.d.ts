@@ -25,13 +25,13 @@ interface _GlobalComponents {
     'BentoGridItem': typeof import("../../app/components/ui/bento-grid/index")['BentoGridItem']
     'BorderBeam': typeof import("../../app/components/ui/border-beam/index")['BorderBeam']
     'Button': typeof import("../../app/components/ui/button/index")['Button']
-    'Card': typeof import("../../app/components/ui/card/Card.vue")['default']
-    'CardAction': typeof import("../../app/components/ui/card/CardAction.vue")['default']
-    'CardContent': typeof import("../../app/components/ui/card/CardContent.vue")['default']
-    'CardDescription': typeof import("../../app/components/ui/card/CardDescription.vue")['default']
-    'CardFooter': typeof import("../../app/components/ui/card/CardFooter.vue")['default']
-    'CardHeader': typeof import("../../app/components/ui/card/CardHeader.vue")['default']
-    'CardTitle': typeof import("../../app/components/ui/card/CardTitle.vue")['default']
+    'Card': typeof import("../../app/components/ui/card/index")['Card']
+    'CardAction': typeof import("../../app/components/ui/card/index")['CardAction']
+    'CardContent': typeof import("../../app/components/ui/card/index")['CardContent']
+    'CardDescription': typeof import("../../app/components/ui/card/index")['CardDescription']
+    'CardFooter': typeof import("../../app/components/ui/card/index")['CardFooter']
+    'CardHeader': typeof import("../../app/components/ui/card/index")['CardHeader']
+    'CardTitle': typeof import("../../app/components/ui/card/index")['CardTitle']
     'Carousel': typeof import("../../app/components/ui/carousel/index")['Carousel']
     'CarouselContent': typeof import("../../app/components/ui/carousel/index")['CarouselContent']
     'CarouselItem': typeof import("../../app/components/ui/carousel/index")['CarouselItem']
@@ -41,10 +41,10 @@ interface _GlobalComponents {
     'CarouselUseCarousel': typeof import("../../app/components/ui/carousel/useCarousel")['default']
     'ChartBarChart': typeof import("../../app/components/ui/chart-bar/BarChart.vue")['default']
     'ChartBar': typeof import("../../app/components/ui/chart-bar/index")['default']
-    'ChartCrosshair': typeof import("../../app/components/ui/chart/ChartCrosshair.vue")['default']
-    'ChartLegend': typeof import("../../app/components/ui/chart/ChartLegend.vue")['default']
-    'ChartSingleTooltip': typeof import("../../app/components/ui/chart/ChartSingleTooltip.vue")['default']
-    'ChartTooltip': typeof import("../../app/components/ui/chart/ChartTooltip.vue")['default']
+    'ChartCrosshair': typeof import("../../app/components/ui/chart/index")['ChartCrosshair']
+    'ChartLegend': typeof import("../../app/components/ui/chart/index")['ChartLegend']
+    'ChartSingleTooltip': typeof import("../../app/components/ui/chart/index")['ChartSingleTooltip']
+    'ChartTooltip': typeof import("../../app/components/ui/chart/index")['ChartTooltip']
     'Chart': typeof import("../../app/components/ui/chart/index")['default']
     'ChartInterface': typeof import("../../app/components/ui/chart/interface")['default']
     'Drawer': typeof import("../../app/components/ui/drawer/index")['Drawer']
@@ -118,6 +118,7 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
     'NuxtImg': typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
     'NuxtPicture': typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
+    'BarChart': typeof import("../../app/components/ui/chart-bar/index")['BarChart']
     'CarouselApi': typeof import("../../app/components/ui/carousel/index")['CarouselApi']
     'DropdownMenuPortal': typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']
     'Icon': typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
@@ -146,13 +147,13 @@ interface _GlobalComponents {
     'LazyBentoGridItem': LazyComponent<typeof import("../../app/components/ui/bento-grid/index")['BentoGridItem']>
     'LazyBorderBeam': LazyComponent<typeof import("../../app/components/ui/border-beam/index")['BorderBeam']>
     'LazyButton': LazyComponent<typeof import("../../app/components/ui/button/index")['Button']>
-    'LazyCard': LazyComponent<typeof import("../../app/components/ui/card/Card.vue")['default']>
-    'LazyCardAction': LazyComponent<typeof import("../../app/components/ui/card/CardAction.vue")['default']>
-    'LazyCardContent': LazyComponent<typeof import("../../app/components/ui/card/CardContent.vue")['default']>
-    'LazyCardDescription': LazyComponent<typeof import("../../app/components/ui/card/CardDescription.vue")['default']>
-    'LazyCardFooter': LazyComponent<typeof import("../../app/components/ui/card/CardFooter.vue")['default']>
-    'LazyCardHeader': LazyComponent<typeof import("../../app/components/ui/card/CardHeader.vue")['default']>
-    'LazyCardTitle': LazyComponent<typeof import("../../app/components/ui/card/CardTitle.vue")['default']>
+    'LazyCard': LazyComponent<typeof import("../../app/components/ui/card/index")['Card']>
+    'LazyCardAction': LazyComponent<typeof import("../../app/components/ui/card/index")['CardAction']>
+    'LazyCardContent': LazyComponent<typeof import("../../app/components/ui/card/index")['CardContent']>
+    'LazyCardDescription': LazyComponent<typeof import("../../app/components/ui/card/index")['CardDescription']>
+    'LazyCardFooter': LazyComponent<typeof import("../../app/components/ui/card/index")['CardFooter']>
+    'LazyCardHeader': LazyComponent<typeof import("../../app/components/ui/card/index")['CardHeader']>
+    'LazyCardTitle': LazyComponent<typeof import("../../app/components/ui/card/index")['CardTitle']>
     'LazyCarousel': LazyComponent<typeof import("../../app/components/ui/carousel/index")['Carousel']>
     'LazyCarouselContent': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselContent']>
     'LazyCarouselItem': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselItem']>
@@ -162,10 +163,10 @@ interface _GlobalComponents {
     'LazyCarouselUseCarousel': LazyComponent<typeof import("../../app/components/ui/carousel/useCarousel")['default']>
     'LazyChartBarChart': LazyComponent<typeof import("../../app/components/ui/chart-bar/BarChart.vue")['default']>
     'LazyChartBar': LazyComponent<typeof import("../../app/components/ui/chart-bar/index")['default']>
-    'LazyChartCrosshair': LazyComponent<typeof import("../../app/components/ui/chart/ChartCrosshair.vue")['default']>
-    'LazyChartLegend': LazyComponent<typeof import("../../app/components/ui/chart/ChartLegend.vue")['default']>
-    'LazyChartSingleTooltip': LazyComponent<typeof import("../../app/components/ui/chart/ChartSingleTooltip.vue")['default']>
-    'LazyChartTooltip': LazyComponent<typeof import("../../app/components/ui/chart/ChartTooltip.vue")['default']>
+    'LazyChartCrosshair': LazyComponent<typeof import("../../app/components/ui/chart/index")['ChartCrosshair']>
+    'LazyChartLegend': LazyComponent<typeof import("../../app/components/ui/chart/index")['ChartLegend']>
+    'LazyChartSingleTooltip': LazyComponent<typeof import("../../app/components/ui/chart/index")['ChartSingleTooltip']>
+    'LazyChartTooltip': LazyComponent<typeof import("../../app/components/ui/chart/index")['ChartTooltip']>
     'LazyChart': LazyComponent<typeof import("../../app/components/ui/chart/index")['default']>
     'LazyChartInterface': LazyComponent<typeof import("../../app/components/ui/chart/interface")['default']>
     'LazyDrawer': LazyComponent<typeof import("../../app/components/ui/drawer/index")['Drawer']>
@@ -239,6 +240,7 @@ interface _GlobalComponents {
     'LazyNuxtRouteAnnouncer': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
     'LazyNuxtImg': LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']>
     'LazyNuxtPicture': LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']>
+    'LazyBarChart': LazyComponent<typeof import("../../app/components/ui/chart-bar/index")['BarChart']>
     'LazyCarouselApi': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselApi']>
     'LazyDropdownMenuPortal': LazyComponent<typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']>
     'LazyIcon': LazyComponent<typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>

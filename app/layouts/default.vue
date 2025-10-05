@@ -3,11 +3,12 @@
         <div class="flex justify-between gap-4 p-4">
             <div>
                 <div class="flex h-10 gap-2 items-center justify-center">
-                    <!-- <a href="/">
-                        <SparklesText class="text-xl font-bold" text="Kompr.ai" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="4" />
-                        <Badge>preview</Badge>
-                    </a> -->
-                    <Badge>{{ host }}</Badge> <small class="text-muted-foreground">by Komprai</small>
+                    <a href="/">
+                        <!-- <SparklesText class="text-xl font-bold" text="Kompr.ai" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="4" />
+                        <Badge>preview</Badge> -->
+                        <Badge>{{ host }}</Badge>
+                    </a>
+                    <a :href="`https://chat.komprai.com/?ref=${host}`"><small class="text-muted-foreground">by Komprai</small></a>
                 </div>
             </div>
             <div class="flex items-center gap-2">
