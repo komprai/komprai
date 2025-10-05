@@ -8,7 +8,7 @@
                 <div>
                     <Icon name="lucide:timer" />
                 </div>
-                <AlertTitle>{{ t('commingsoon.title') }}!</AlertTitle>
+                <AlertTitle class="hidden lg:block">{{ t('commingsoon.title') }}!</AlertTitle>
                 <AlertDescription>
                     {{ t('commingsoon.description') }}
                 </AlertDescription>

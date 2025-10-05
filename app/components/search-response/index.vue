@@ -21,9 +21,16 @@
             <Carousel class="relative w-full">
                 <CarouselContent>
                     <CarouselItem class="basis-1/2 xs:lg:basis-1/2 lg:basis-1/3">
-                        <small class="text-muted-foreground">{{ t('search.response.sponsored') }} &middot; vendido por Magalu</small>
+                        
                         <Drawer>
-                            <DrawerTrigger><img src="https://s3-sa-east-1.amazonaws.com/images.anymarket.com.br/259051458./C54969EEF12489FF08FDE7BCC02F65C1/original_image.jpg" class="w-full p-1 border-1 rounded-sm" alt=""></DrawerTrigger>
+                            <DrawerTrigger>
+                                <div class="relative">
+                                    <small class="absolute left-2 top-2 text-muted-foreground">
+                                        <Badge variant="secondary">{{ t('search.response.sponsored') }}</Badge>
+                                    </small>
+                                    <img src="https://s3-sa-east-1.amazonaws.com/images.anymarket.com.br/259051458./C54969EEF12489FF08FDE7BCC02F65C1/original_image.jpg" class="w-full p-1 border-1 rounded-sm" alt="">
+                                </div>
+                            </DrawerTrigger>
                             <DrawerContent>
                                 <DrawerHeader>
                                     <DrawerTitle>Are you absolutely sure?</DrawerTitle>
@@ -39,15 +46,18 @@
                                 </DrawerFooter>
                             </DrawerContent>
                         </Drawer>
-                        <div>R$ 2.000,00</div>
+                        <div class="flex gap-2">
+                            <s>R$ 2.000,00</s>
+                            <span>&middot;</span>
+                            <span>R$ 2.000,00</span>
+                        </div>
                         <div class="flex gap-2 my-2">
                             <Button variant="outline" class="flex-1">
-                                Comprar <Icon name="lucide:external-link"></Icon>
+                                Magazine Luiza <Icon name="lucide:external-link"></Icon>
                             </Button>
                         </div>
                     </CarouselItem>
                     <CarouselItem class="basis-1/2 xs:lg:basis-1/2 lg:basis-1/3" v-for="i in 5">
-                        <small class="text-muted-foreground">vendido por Magalu</small>
                         <Drawer>
                             <DrawerTrigger><img src="https://s3-sa-east-1.amazonaws.com/images.anymarket.com.br/259051458./0FCAE2E00E70B1260F4F2DCBBDE3B9DD/original_image.jpg" class="w-full p-1 border-1 rounded-sm" alt=""></DrawerTrigger>
                             <DrawerContent>
@@ -65,10 +75,14 @@
                                 </DrawerFooter>
                             </DrawerContent>
                         </Drawer>
-                        <div>R$ 2.000,00</div>
+                        <div class="flex gap-2">
+                            <s>R$ 2.000,00</s>
+                            <span>&middot;</span>
+                            <span>R$ 2.000,00</span>
+                        </div>
                         <div class="flex gap-2 my-2">
                             <Button variant="outline" class="flex-1">
-                                Comprar <Icon name="lucide:external-link"></Icon>
+                                Magazine Luiza <Icon name="lucide:external-link"></Icon>
                             </Button>
                         </div>
                     </CarouselItem>
