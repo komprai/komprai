@@ -14,10 +14,10 @@
                 </AlertDescription>
             </Alert>
 
-            <!-- <prse><code>{{ JSON.stringify({ chatHistory, searchId: currentSearchId }, null, 4) }}</code></pre> -->
-            <SearchResponse v-for="history in chatHistory" :history="history" @done="handleResponse"></SearchResponse>
+            <!-- <prse><code>{{ JSON.stringify({ chat, searchId: currentSearchId }, null, 4) }}</code></pre> -->
+            <SearchResponse v-for="history in chat" :history="history" @done="handleResponse"></SearchResponse>
 
-            <NuxtLink to="https://kompr.ai/url/O0mR8IStXGez" v-if="chatHistory.length > 0">compartilhar</NuxtLink>
+            <NuxtLink to="https://kompr.ai/url/O0mR8IStXGez" v-if="chat.length > 0">compartilhar</NuxtLink>
         </div>
     </AutoScroll>
 
@@ -89,7 +89,11 @@
 import { v7 } from "uuid";
 const { t, locale } = useI18n();
 
-const { isOpen, searchId } = defineProps({
+const { isOpen, searchId, chatHistory } = defineProps({
+    chatHistory: {
+        type: Array,
+        default: []
+    },
     isOpen: {
         type: Boolean,
         default: false
@@ -100,16 +104,16 @@ const { isOpen, searchId } = defineProps({
     }
 })
 
-const chatHistory = ref<any[]>([]);
+const chat = ref<any[]>(chatHistory);
 
 const inputRef = ref<HTMLInputElement | null>(null);
 const currentPrompt = ref("");
-const isSearchOpened = ref(false);
+const isSearchOpened = ref(isOpen);
 const currentSearchId = ref(searchId || v7())
 
 useHead({ title: "Kompr.ai" });
 
-watch(chatHistory, (nv) => {
+watch(chat, (nv) => {
     if (nv.length > 0) {
         isSearchOpened.value = true;
     }
@@ -126,7 +130,7 @@ async function search() {
 
     window.history.pushState({}, '', `/${locale.value == 'en' ? '' : locale.value + '/'}chat/${searchId.value}`);
 
-    chatHistory.value.push({
+    chat.value.push({
         id: v7(),
         searchId,
         request: {

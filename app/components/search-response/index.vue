@@ -37,7 +37,7 @@
                                     <DrawerDescription>This action cannot be undone.</DrawerDescription>
                                 </DrawerHeader>
                                 <DrawerFooter>
-                                    <Button variant="outline" class="w-full">
+                                    <Button variant="outline" class="cursor-pointer w-full" @click="$router.push('/url/redirect/storeId?url=xxxx')">
                                         Magazine Luiza <Icon name="lucide:external-link"></Icon>
                                     </Button>
                                 </DrawerFooter>
@@ -49,7 +49,7 @@
                             <span>R$ 2.000,00</span>
                         </div>
                         <div class="flex gap-2 my-2">
-                            <Button variant="outline" class="flex-1">
+                            <Button variant="outline" class="cursor-pointer w-full" @click="$router.push('/url/redirect/storeId?url=xxxx')">
                                 Magazine Luiza <Icon name="lucide:external-link"></Icon>
                             </Button>
                         </div>
@@ -63,7 +63,7 @@
                                     <DrawerDescription>This action cannot be undone.</DrawerDescription>
                                 </DrawerHeader>
                                 <DrawerFooter>
-                                    <Button variant="outline" class="w-full">
+                                    <Button variant="outline" class="cursor-pointer w-full" @click="$router.push('/url/redirect/storeId?url=xxxx')">
                                         Magazine Luiza <Icon name="lucide:external-link"></Icon>
                                     </Button>
                                 </DrawerFooter>
@@ -75,7 +75,7 @@
                             <span>R$ 2.000,00</span>
                         </div>
                         <div class="flex gap-2 my-2">
-                            <Button variant="outline" class="flex-1">
+                            <Button variant="outline" class="cursor-pointer w-full" @click="$router.push('/url/redirect/storeId?url=xxxx')">
                                 Magazine Luiza <Icon name="lucide:external-link"></Icon>
                             </Button>
                         </div>
@@ -161,6 +161,9 @@ const { history } = defineProps({
 const emit = defineEmits(['done']);
 
 async function requestInsights() {
+
+    if(history.insights.done) return;
+
     history.request.loading.insights = true;
     return new Promise(function (resolve) {
         setTimeout(() => {
@@ -177,6 +180,9 @@ async function requestInsights() {
 }
 
 async function requestProductSearch() {
+
+    if(history.search.done) return;
+
     history.request.loading.search = true;
 
     return new Promise(function (resolve) {
@@ -194,6 +200,9 @@ async function requestProductSearch() {
 }
 
 async function requestPrompt() {
+
+    if(history.prompt.done) return;
+
     return new Promise(function (resolve) {
         setTimeout(() => {
             if (history) {

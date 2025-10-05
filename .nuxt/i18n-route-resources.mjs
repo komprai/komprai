@@ -15,11 +15,16 @@ export const pathToI18nConfig = {
   "/chat/:searchId()": {
     "br": "/chat/:searchId()",
     "en": "/chat/:searchId()"
+  },
+  "/url/redirect/:storeId()": {
+    "br": "/url/redirect/:storeId()",
+    "en": "/url/redirect/:storeId()"
   }
 };
 export const i18nPathToPath = {
   "/": "/",
   "/landing": "/landing",
   "/url/:id()": "/url/:id()",
-  "/chat/:searchId()": "/chat/:searchId()"
+  "/chat/:searchId()": "/chat/:searchId()",
+  "/url/redirect/:storeId()": "/url/redirect/:storeId()"
 };
