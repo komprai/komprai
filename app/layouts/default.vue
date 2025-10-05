@@ -68,7 +68,7 @@ const mode = useColorMode({
     },
 })
 
-const { state, next } = useCycleList(['dark', 'light', 'contrast', 'auto'] as const, { initialValue: mode })
+const { state, next } = useCycleList(['dark', 'light', 'auto'] as const, { initialValue: mode })
 
 watchEffect(() => mode.value = state.value);
 </script>

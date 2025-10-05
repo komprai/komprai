@@ -21,7 +21,7 @@
             <Carousel class="relative w-full">
                 <CarouselContent>
                     <CarouselItem class="basis-1/2 xs:lg:basis-1/2 lg:basis-1/3">
-                        
+
                         <Drawer>
                             <DrawerTrigger>
                                 <div class="relative">
@@ -46,7 +46,7 @@
                                 </DrawerFooter>
                             </DrawerContent>
                         </Drawer>
-                        <div class="flex gap-2">
+                        <div class="flex text-xs gap-2">
                             <s>R$ 2.000,00</s>
                             <span>&middot;</span>
                             <span>R$ 2.000,00</span>
@@ -75,7 +75,7 @@
                                 </DrawerFooter>
                             </DrawerContent>
                         </Drawer>
-                        <div class="flex gap-2">
+                        <div class="flex text-xs gap-2">
                             <s>R$ 2.000,00</s>
                             <span>&middot;</span>
                             <span>R$ 2.000,00</span>
@@ -101,6 +101,7 @@
             <AnimatedTestimonials v-if="history.search.done" :testimonials="testimonials" />
         </ClientOnly> -->
 
+        
         <SeachPlaceholder type="insights" v-if="history.request.loading.insights"></SeachPlaceholder>
 
         <div v-if="history.insights.done" class="my-4">
@@ -115,6 +116,8 @@
 
             <div class="my-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi maxime libero impedit porro? Veritatis numquam pariatur amet inventore facilis repellat praesentium quidem iusto suscipit, quibusdam, explicabo consectetur. Sed, labore.</div>
             <div class="my-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi maxime libero impedit porro? Veritatis numquam pariatur amet inventore facilis repellat praesentium quidem iusto suscipit, quibusdam, explicabo consectetur. Sed, labore.</div>
+
+            <ExpandableGallery :images="images" class="py-4" />
 
             <div class="">
                 <p class="text-zinc-700 dark:text-zinc-300 text-base md:text-lg leading-relaxed">
@@ -242,4 +245,12 @@ const testimonials = [
             "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
 ];
+
+const images = [
+    "https://images.unsplash.com/photo-1709884735646-897b57461d61?q=80&w=3628&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1502085671122-2d218cd434e6?q=80&w=3626&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+];
+
 </script>
