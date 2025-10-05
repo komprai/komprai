@@ -14,7 +14,11 @@ type HydrationStrategies = {
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 
 interface _GlobalComponents {
-      'AnimatedTestimonials': typeof import("../../app/components/ui/animated-testimonials/index")['AnimatedTestimonials']
+      'Alert': typeof import("../../app/components/ui/alert/index")['Alert']
+    'AlertDescription': typeof import("../../app/components/ui/alert/index")['AlertDescription']
+    'AlertTitle': typeof import("../../app/components/ui/alert/index")['AlertTitle']
+    'AnimatedTestimonials': typeof import("../../app/components/ui/animated-testimonials/index")['AnimatedTestimonials']
+    'Badge': typeof import("../../app/components/ui/badge/index")['Badge']
     'BalanceSlider': typeof import("../../app/components/ui/balance-slider/index")['BalanceSlider']
     'BorderBeam': typeof import("../../app/components/ui/border-beam/index")['BorderBeam']
     'Button': typeof import("../../app/components/ui/button/index")['Button']
@@ -96,8 +100,8 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
     'NuxtImg': typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
     'NuxtPicture': typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
-    'CarouselApi': typeof import("../../app/components/ui/carousel/index")['CarouselApi']
     'DropdownMenuPortal': typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']
+    'CarouselApi': typeof import("../../app/components/ui/carousel/index")['CarouselApi']
     'Icon': typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
     'NuxtLinkLocale': typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
     'SwitchLocalePathLink': typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
@@ -113,7 +117,11 @@ interface _GlobalComponents {
     'Body': typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': typeof import("../../node_modules/nuxt/dist/app/components/server-placeholder")['default']
-      'LazyAnimatedTestimonials': LazyComponent<typeof import("../../app/components/ui/animated-testimonials/index")['AnimatedTestimonials']>
+      'LazyAlert': LazyComponent<typeof import("../../app/components/ui/alert/index")['Alert']>
+    'LazyAlertDescription': LazyComponent<typeof import("../../app/components/ui/alert/index")['AlertDescription']>
+    'LazyAlertTitle': LazyComponent<typeof import("../../app/components/ui/alert/index")['AlertTitle']>
+    'LazyAnimatedTestimonials': LazyComponent<typeof import("../../app/components/ui/animated-testimonials/index")['AnimatedTestimonials']>
+    'LazyBadge': LazyComponent<typeof import("../../app/components/ui/badge/index")['Badge']>
     'LazyBalanceSlider': LazyComponent<typeof import("../../app/components/ui/balance-slider/index")['BalanceSlider']>
     'LazyBorderBeam': LazyComponent<typeof import("../../app/components/ui/border-beam/index")['BorderBeam']>
     'LazyButton': LazyComponent<typeof import("../../app/components/ui/button/index")['Button']>
@@ -195,8 +203,8 @@ interface _GlobalComponents {
     'LazyNuxtRouteAnnouncer': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
     'LazyNuxtImg': LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']>
     'LazyNuxtPicture': LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']>
-    'LazyCarouselApi': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselApi']>
     'LazyDropdownMenuPortal': LazyComponent<typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']>
+    'LazyCarouselApi': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselApi']>
     'LazyIcon': LazyComponent<typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
     'LazyNuxtLinkLocale': LazyComponent<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']>
     'LazySwitchLocalePathLink': LazyComponent<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']>

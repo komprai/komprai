@@ -1,7 +1,11 @@
 {
+  "commingsoon": {
+    "title": "Em breve",
+    "description": "Isso é uma demonstração, mas exatamente como você encontrara produtos e lojas em breve."
+  },
   "search": {
     "hero": {
-      "komprai": "komprai",
+      "kompr.ai": "kompr.ai",
       "find": "busque",
       "compare": "compare",
       "buy": "e compre!"
@@ -14,6 +18,9 @@
     },
     "actions": {
       "search": "Pesquisar"
+    },
+    "response": {
+      "sponsored": "patrocinado"
     }
   }
 }

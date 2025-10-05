@@ -2,10 +2,11 @@
     <div class="fixed top-0 z-[300] w-full bg-white dark:bg-black xl:bg-transparent">
         <div class="flex justify-between gap-4 p-4">
             <div>
-                <div class="flex h-10 items-center justify-center">
-                    <NuxtLink to="/">
-                        <SparklesText class="text-xl font-bold" text="Komprai" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="4" />
-                    </NuxtLink>
+                <div class="flex h-10 gap-2 items-center justify-center">
+                    <a href="/">
+                        <SparklesText class="text-xl font-bold" text="Kompr.ai" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="4" />
+                    </a>
+                    <Badge>Preview</Badge>
                 </div>
             </div>
             <div class="flex items-center gap-2">
@@ -16,10 +17,36 @@
                     <i v-if="state === 'auto'" i-carbon-laptop inline-block align-middle class="align-middle" />
                     <span class="ml-2 capitalize">{{ state }}</span>
                 </button>
-                <span>&middot;</span>
-                <NuxtLink :to="$switchLocalePath('br')">PT</NuxtLink>
-                <span>&middot;</span>
-                <NuxtLink :to="$switchLocalePath('en')">EN</NuxtLink>
+
+                <DropdownMenu>
+                    <DropdownMenuTrigger as-child>
+                        <Button variant="outline">
+                            <Icon name="lucide:moon"></Icon>
+                        </Button>
+                    </DropdownMenuTrigger>
+
+                    <DropdownMenuContent>
+                        <DropdownMenuLabel>Adicionar mais informações</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem>Incluir link</DropdownMenuItem>
+                        <DropdownMenuItem>Incluir fotos</DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+
+                <DropdownMenu>
+                    <DropdownMenuTrigger as-child>
+                        <Button variant="outline">
+                            <Icon name="lucide:globe"></Icon>
+                        </Button>
+                    </DropdownMenuTrigger>
+
+                    <DropdownMenuContent>
+                        <DropdownMenuLabel>Adicionar mais informações</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <NuxtLink :to="$switchLocalePath('en')">English</NuxtLink>
+                        <NuxtLink :to="$switchLocalePath('br')">Portuguese BR</NuxtLink>
+                    </DropdownMenuContent>
+                </DropdownMenu>
             </div>
         </div>
     </div>
@@ -32,7 +59,7 @@
 import { watchEffect } from 'vue'
 import { useColorMode, useCycleList } from '@vueuse/core'
 
-useHead({ title: "Komprai" });
+useHead({ title: "Kompr.ai" });
 
 const mode = useColorMode({
     emitAuto: true,

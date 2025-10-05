@@ -6,5 +6,5 @@
 
 <script setup lang="ts">
 const { t, locale } = useI18n()
-useHead({ title: "Komprai" });
+useHead({ title: "Kompr.ai" });
 </script>

@@ -1097,7 +1097,7 @@ const _inlineRuntimeConfig = {
   },
   "public": {
     "I18N_MODE": "prefix",
-    "BASE_URL": "http://komprai.local",
+    "BASE_URL": "http://kompr.ai.local",
     "i18n": {
       "baseUrl": "",
       "defaultLocale": "en",
@@ -1125,7 +1125,7 @@ const _inlineRuntimeConfig = {
         "cookieKey": "i18n_redirected",
         "cookieSecure": false,
         "fallbackLocale": "",
-        "redirectOn": "root",
+        "redirectOn": "no prefix",
         "useCookie": true
       },
       "experimental": {
@@ -3050,9 +3050,13 @@ const errorDev = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   template: template$1
 }, Symbol.toStringTag, { value: 'Module' }));
 
+var commingsoon$1 = {
+	title: "Em breve",
+	description: "Isso é uma demonstração, mas exatamente como você encontrara produtos e lojas em breve."
+};
 var search$1 = {
 	hero: {
-		komprai: "komprai",
+		"kompr.ai": "kompr.ai",
 		find: "busque",
 		compare: "compare",
 		buy: "e compre!"
@@ -3065,21 +3069,30 @@ var search$1 = {
 	},
 	actions: {
 		search: "Pesquisar"
+	},
+	response: {
+		sponsored: "patrocinado"
 	}
 };
 const br = {
+	commingsoon: commingsoon$1,
 	search: search$1
 };
 
 const br$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
+  commingsoon: commingsoon$1,
   default: br,
   search: search$1
 }, Symbol.toStringTag, { value: 'Module' }));
 
+var commingsoon = {
+	title: "Comming soon",
+	description: "This is a demonstration"
+};
 var search = {
 	hero: {
-		komprai: "komprai",
+		"kompr.ai": "kompr.ai",
 		find: "find",
 		compare: "compare",
 		buy: "and buy!"
@@ -3098,11 +3111,13 @@ var search = {
 	}
 };
 const en = {
+	commingsoon: commingsoon,
 	search: search
 };
 
 const en$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
+  commingsoon: commingsoon,
   default: en,
   search: search
 }, Symbol.toStringTag, { value: 'Module' }));

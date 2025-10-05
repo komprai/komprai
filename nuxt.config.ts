@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             I18N_MODE: 'prefix',
-            BASE_URL: 'http://komprai.local'
+            BASE_URL: 'http://kompr.ai.local'
         }
     },
 
@@ -43,9 +43,10 @@ export default defineNuxtConfig({
         detectBrowserLanguage: {
             useCookie: true,
             cookieKey: 'i18n_redirected',
-            // cookieDomain: '.komprai.local',
-            redirectOn: 'root'
-            // redirectOn: 'no prefix'
+            // cookieDomain: 'komprai.local',
+            redirectOn: 'no prefix',
+            // alwaysRedirect: true,
+            // cookieSecure: false, // útil se estiver testando em http, não https
         },
         strategy: 'prefix_except_default',
         seo: true

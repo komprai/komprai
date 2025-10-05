@@ -2,8 +2,17 @@
 
     <FluidCursor v-if="!isSearchOpened"></FluidCursor>
 
+    
+    
     <AutoScroll>
         <div class="container px-2 md:px-0 max-w-4xl mt-22 xl:mt-4 pb-36 mx-auto">
+            <Alert class="mb-4">
+                <!-- <Rocket class="h-4 w-4" /> -->
+                <AlertTitle>{{t('commingsoon.title')}}!</AlertTitle>
+                <AlertDescription>
+                    {{t('commingsoon.description')}}
+                </AlertDescription>
+            </Alert>
             <!-- <prse><code>{{ JSON.stringify({ chatHistory, searchId: currentSearchId }, null, 4) }}</code></pre> -->
             <SearchResponse v-for="history in chatHistory" :history="history" @done="handleResponse"></SearchResponse>
         </div>
@@ -13,7 +22,7 @@
         <ClientOnly>
             <div :class="{ 'mb-8': !isSearchOpened }">
                 <MorphingText v-if="!isSearchOpened" :texts="[
-                    t('komprai'),
+                    t('kompr.ai'),
                     t('search.hero.find'),
                     t('search.hero.compare'),
                     t('search.hero.buy'),
@@ -106,7 +115,7 @@ const currentPrompt = ref("");
 const isSearchOpened = ref(false);
 const currentSearchId = ref(searchId || v7())
 
-useHead({ title: "Komprai" });
+useHead({ title: "Kompr.ai" });
 
 watch(chatHistory, (nv) => {
     if (nv.length > 0) {

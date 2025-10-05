@@ -1,7 +1,11 @@
 {
+  "commingsoon": {
+    "title": "Comming soon",
+    "description": "This is a demonstration"
+  },
   "search": {
     "hero": {
-      "komprai": "komprai",
+      "kompr.ai": "kompr.ai",
       "find": "find",
       "compare": "compare",
       "buy": "and buy!"

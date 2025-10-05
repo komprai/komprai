@@ -12,47 +12,64 @@
 
         <SeachPlaceholder type="search" v-if="history.request.loading.search"></SeachPlaceholder>
 
-        <Drawer>
-            <DrawerTrigger>Open</DrawerTrigger>
-            <DrawerContent>
-                <DrawerHeader>
-                    <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-                    <DrawerDescription>This action cannot be undone.</DrawerDescription>
-                </DrawerHeader>
-                <DrawerFooter>
-                    <Button>Submit</Button>
-                    <!-- <DrawerClose>
+
+
+        <Carousel class="relative w-full" v-if="history.search.done">
+            <CarouselContent>
+                <CarouselItem class="basis-1/1 xs:lg:basis-1/2 lg:basis-1/3">
+                    <small class="text-muted-foreground">{{ t('search.response.sponsored') }} &middot; vendido por Magalu</small>
+                    <Drawer>
+                        <DrawerTrigger><img src="https://s3-sa-east-1.amazonaws.com/images.anymarket.com.br/259051458./C54969EEF12489FF08FDE7BCC02F65C1/original_image.jpg" class="w-full p-1 border-1 rounded-sm" alt=""></DrawerTrigger>
+                        <DrawerContent>
+                            <DrawerHeader>
+                                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+                                <DrawerDescription>This action cannot be undone.</DrawerDescription>
+                            </DrawerHeader>
+                            <DrawerFooter>
+                                <Button>Submit</Button>
+                                <!-- <DrawerClose>
                         <Button variant="outline">
                             Cancel
                         </Button>
                     </DrawerClose> -->
-                </DrawerFooter>
-            </DrawerContent>
-        </Drawer>
+                            </DrawerFooter>
+                        </DrawerContent>
+                    </Drawer>
 
-        <Carousel class="relative px-2 w-full" v-if="history.search.done">
-            <CarouselContent>
-                <CarouselItem class="basis-1/1 lg:basis-1/3">
-                    <small class="text-muted-foreground">{{ t('search.response.sponsored') }} &middot; vendido por Magalu</small>
-                    <img src="https://placehold.co/800" class="w-full p-1 border-1 rounded-sm" alt="">
                     <div class="flex gap-2 my-2">
-                        <Button variant="secondary">x</Button>
-                        <Button class="flex-1">Comprar</Button>
-                        <Button variant="destructive">x</Button>
+                        <Button variant="secondary" class="flex-1">
+                            Comprar <Icon name="lucide:external-link"></Icon>
+                        </Button>
                     </div>
                 </CarouselItem>
-                <CarouselItem class="basis-1/1 lg:basis-1/3" v-for="i in 5">
+                <CarouselItem class="basis-1/1 xs:lg:basis-1/2 lg:basis-1/3" v-for="i in 5">
                     <small class="text-muted-foreground">vendido por Magalu</small>
-                    <img src="https://placehold.co/800" class="w-full p-1 border-1 rounded-sm" alt="">
+                    <Drawer>
+                        <DrawerTrigger><img src="https://s3-sa-east-1.amazonaws.com/images.anymarket.com.br/259051458./0FCAE2E00E70B1260F4F2DCBBDE3B9DD/original_image.jpg" class="w-full p-1 border-1 rounded-sm" alt=""></DrawerTrigger>
+                        <DrawerContent>
+                            <DrawerHeader>
+                                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+                                <DrawerDescription>This action cannot be undone.</DrawerDescription>
+                            </DrawerHeader>
+                            <DrawerFooter>
+                                <Button>Submit</Button>
+                                <!-- <DrawerClose>
+                        <Button variant="outline">
+                            Cancel
+                        </Button>
+                    </DrawerClose> -->
+                            </DrawerFooter>
+                        </DrawerContent>
+                    </Drawer>
                     <div class="flex gap-2 my-2">
-                        <Button variant="secondary">x</Button>
-                        <Button class="flex-1">Comprar</Button>
-                        <Button variant="destructive">x</Button>
+                        <Button variant="secondary" class="flex-1">
+                            Comprar <Icon name="lucide:external-link"></Icon>
+                        </Button>
                     </div>
                 </CarouselItem>
             </CarouselContent>
-            <CarouselPrevious class="hidden" />
-            <CarouselNext class="hidden" />
+            <CarouselPrevious class="hidden lg:inline-flex" />
+            <CarouselNext class="hidden lg:inline-flex" />
         </Carousel>
 
         <!-- <ClientOnly>

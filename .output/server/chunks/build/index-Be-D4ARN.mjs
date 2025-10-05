@@ -928,7 +928,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       _push(`<div${ssrRenderAttrs(_attrs)}><div class="fixed top-0 w-full bg-white dark:bg-black"><div class="flex gap-4 p-4"><div><div class="flex h-10 items-center justify-center">`);
       _push(ssrRenderComponent(_component_SparklesText, {
         class: "text-2xl font-bold",
-        text: "Komprai",
+        text: "Kompr.ai",
         colors: { first: "#9E7AFF", second: "#FE8BBB" },
         "sparkles-count": 4
       }, null, _parent));
@@ -1954,7 +1954,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       _push(ssrRenderComponent(_component_ClientOnly, null, {}, _parent));
       _push(`</div><div class="fixed bottom-0 w-full flex justify-center p-2 mb-4 z-[434233]">`);
       _push(ssrRenderComponent(_component_ClientOnly, null, {}, _parent));
-      _push(`</div><div class="mt-14 mb-24 text-center"><small class="text-muted-foreground">© Copyright · Komprai, LLC.</small></div></div>`);
+      _push(`</div><div class="mt-14 mb-24 text-center"><small class="text-muted-foreground">© Copyright · Kompr.ai, LLC.</small></div></div>`);
     };
   }
 });
