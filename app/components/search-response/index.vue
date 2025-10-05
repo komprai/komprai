@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="flex w-full justify-end mb-4">
-            <div class="bg-gray-200 rounded-md p-4">
+            <div class="bg-zinc-200 dark:bg-zinc-800 rounded-md p-4">
                 {{ history.request.prompt }}
             </div>
         </div>
@@ -37,16 +37,13 @@
                                     <DrawerDescription>This action cannot be undone.</DrawerDescription>
                                 </DrawerHeader>
                                 <DrawerFooter>
-                                    <Button>Submit</Button>
-                                    <!-- <DrawerClose>
-                        <Button variant="outline">
-                            Cancel
-                        </Button>
-                    </DrawerClose> -->
+                                    <Button variant="outline" class="w-full">
+                                        Magazine Luiza <Icon name="lucide:external-link"></Icon>
+                                    </Button>
                                 </DrawerFooter>
                             </DrawerContent>
                         </Drawer>
-                        <div class="flex text-xs gap-2">
+                        <div class="flex text-xs gap-1">
                             <s>R$ 2.000,00</s>
                             <span>&middot;</span>
                             <span>R$ 2.000,00</span>
@@ -66,16 +63,13 @@
                                     <DrawerDescription>This action cannot be undone.</DrawerDescription>
                                 </DrawerHeader>
                                 <DrawerFooter>
-                                    <Button>Submit</Button>
-                                    <!-- <DrawerClose>
-                        <Button variant="outline">
-                            Cancel
-                        </Button>
-                    </DrawerClose> -->
+                                    <Button variant="outline" class="w-full">
+                                        Magazine Luiza <Icon name="lucide:external-link"></Icon>
+                                    </Button>
                                 </DrawerFooter>
                             </DrawerContent>
                         </Drawer>
-                        <div class="flex text-xs gap-2">
+                        <div class="flex text-xs gap-1">
                             <s>R$ 2.000,00</s>
                             <span>&middot;</span>
                             <span>R$ 2.000,00</span>
@@ -101,7 +95,7 @@
             <AnimatedTestimonials v-if="history.search.done" :testimonials="testimonials" />
         </ClientOnly> -->
 
-        
+
         <SeachPlaceholder type="insights" v-if="history.request.loading.insights"></SeachPlaceholder>
 
         <div v-if="history.insights.done" class="my-4">
@@ -117,7 +111,16 @@
             <div class="my-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi maxime libero impedit porro? Veritatis numquam pariatur amet inventore facilis repellat praesentium quidem iusto suscipit, quibusdam, explicabo consectetur. Sed, labore.</div>
             <div class="my-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi maxime libero impedit porro? Veritatis numquam pariatur amet inventore facilis repellat praesentium quidem iusto suscipit, quibusdam, explicabo consectetur. Sed, labore.</div>
 
-            <ExpandableGallery :images="images" class="py-4" />
+            <!-- <ExpandableGallery :images="images" class="py-4" /> -->
+
+            <!-- <div class="relative border-1 rounded-sm p-4 text-sm my-4">
+                <small class="absolute right-2 bottom-2 text-muted-foreground">
+                    <Badge variant="secondary">{{ t('search.response.sponsored') }}</Badge>
+                </small>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vitae et dicta eaque repellat alias officia, architecto nobis minus ipsum sint nulla dolorum labore nisi distinctio atque! Perspiciatis, ratione mollitia.
+                </div>
+            </div> -->
 
             <div class="">
                 <p class="text-zinc-700 dark:text-zinc-300 text-base md:text-lg leading-relaxed">
@@ -131,6 +134,13 @@
             <div class="w-full mt-4">
                 <BalanceSlider :right-color="'#ff0000'" :left-color="'#00ff00'" left-content="BOM" right-content="RUIM" :indicator-color="'#0000ff'" />
             </div>
+
+            <BarChart :data="data" index="name" :categories="['total', 'predicted']" :y-formatter="(tick, i) => {
+                return typeof tick === 'number'
+                    ? `$ ${new Intl.NumberFormat('us').format(tick).toString()}`
+                    : ''
+            }" />
+
         </div>
     </div>
 </template>
@@ -138,6 +148,8 @@
 <script lang="ts" setup>
 
 const { t, locale } = useI18n();
+
+import { BarChart } from "@/components/ui/chart-bar"
 
 const { history } = defineProps({
     history: {
@@ -160,7 +172,7 @@ async function requestInsights() {
                 };
                 resolve(true);
             }
-        }, 1000)
+        }, 3000)
     })
 }
 
@@ -177,7 +189,7 @@ async function requestProductSearch() {
                 };
                 resolve(true);
             }
-        }, 1000)
+        }, 500)
     })
 }
 
@@ -192,7 +204,7 @@ async function requestPrompt() {
                 };
                 resolve(true);
             }
-        }, 1000)
+        }, 3000)
     })
 }
 
@@ -202,6 +214,15 @@ onMounted(async () => {
     await requestInsights()
 });
 
+const data = [
+    { name: "Jan", total: Math.floor(Math.random() * 2000) + 500, predicted: Math.floor(Math.random() * 2000) + 500 },
+    { name: "Feb", total: Math.floor(Math.random() * 2000) + 500, predicted: Math.floor(Math.random() * 2000) + 500 },
+    { name: "Mar", total: Math.floor(Math.random() * 2000) + 500, predicted: Math.floor(Math.random() * 2000) + 500 },
+    { name: "Apr", total: Math.floor(Math.random() * 2000) + 500, predicted: Math.floor(Math.random() * 2000) + 500 },
+    { name: "May", total: Math.floor(Math.random() * 2000) + 500, predicted: Math.floor(Math.random() * 2000) + 500 },
+    { name: "Jun", total: Math.floor(Math.random() * 2000) + 500, predicted: Math.floor(Math.random() * 2000) + 500 },
+    { name: "Jul", total: Math.floor(Math.random() * 2000) + 500, predicted: Math.floor(Math.random() * 2000) + 500 },
+]
 
 const testimonials = [
     {

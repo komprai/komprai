@@ -1,12 +1,13 @@
 <template>
-    <div class="fixed top-0 z-[300] w-full bg-white dark:bg-black xl:bg-transparent">
+    <div class="fixed top-0 z-[300] w-full bg-white dark:bg-zinc-950 xl:bg-transparent xl:dark:bg-transparent">
         <div class="flex justify-between gap-4 p-4">
             <div>
                 <div class="flex h-10 gap-2 items-center justify-center">
-                    <a href="/">
+                    <!-- <a href="/">
                         <SparklesText class="text-xl font-bold" text="Kompr.ai" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="4" />
-                    </a>
-                    <Badge>Preview</Badge>
+                        <Badge>preview</Badge>
+                    </a> -->
+                    <Badge>{{ host }}</Badge> <small class="text-muted-foreground">by Komprai</small>
                 </div>
             </div>
             <div class="flex items-center gap-2">
@@ -57,7 +58,10 @@
 
 <script setup lang="ts">
 import { watchEffect } from 'vue'
+
 import { useColorMode, useCycleList } from '@vueuse/core'
+
+const host = useState<string>('host');
 
 useHead({ title: "Kompr.ai" });
 
@@ -71,4 +75,11 @@ const mode = useColorMode({
 const { state, next } = useCycleList(['dark', 'light', 'auto'] as const, { initialValue: mode })
 
 watchEffect(() => mode.value = state.value);
+
+const { data, error, pending } = await useFetch('https://api.example.com/posts', {
+    query: { host: host.value }, 
+    key: 'posts-home'
+})
+
+
 </script>

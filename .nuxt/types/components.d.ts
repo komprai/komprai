@@ -25,6 +25,13 @@ interface _GlobalComponents {
     'BentoGridItem': typeof import("../../app/components/ui/bento-grid/index")['BentoGridItem']
     'BorderBeam': typeof import("../../app/components/ui/border-beam/index")['BorderBeam']
     'Button': typeof import("../../app/components/ui/button/index")['Button']
+    'Card': typeof import("../../app/components/ui/card/Card.vue")['default']
+    'CardAction': typeof import("../../app/components/ui/card/CardAction.vue")['default']
+    'CardContent': typeof import("../../app/components/ui/card/CardContent.vue")['default']
+    'CardDescription': typeof import("../../app/components/ui/card/CardDescription.vue")['default']
+    'CardFooter': typeof import("../../app/components/ui/card/CardFooter.vue")['default']
+    'CardHeader': typeof import("../../app/components/ui/card/CardHeader.vue")['default']
+    'CardTitle': typeof import("../../app/components/ui/card/CardTitle.vue")['default']
     'Carousel': typeof import("../../app/components/ui/carousel/index")['Carousel']
     'CarouselContent': typeof import("../../app/components/ui/carousel/index")['CarouselContent']
     'CarouselItem': typeof import("../../app/components/ui/carousel/index")['CarouselItem']
@@ -32,6 +39,14 @@ interface _GlobalComponents {
     'CarouselPrevious': typeof import("../../app/components/ui/carousel/index")['CarouselPrevious']
     'CarouselInterface': typeof import("../../app/components/ui/carousel/interface")['default']
     'CarouselUseCarousel': typeof import("../../app/components/ui/carousel/useCarousel")['default']
+    'ChartBarChart': typeof import("../../app/components/ui/chart-bar/BarChart.vue")['default']
+    'ChartBar': typeof import("../../app/components/ui/chart-bar/index")['default']
+    'ChartCrosshair': typeof import("../../app/components/ui/chart/ChartCrosshair.vue")['default']
+    'ChartLegend': typeof import("../../app/components/ui/chart/ChartLegend.vue")['default']
+    'ChartSingleTooltip': typeof import("../../app/components/ui/chart/ChartSingleTooltip.vue")['default']
+    'ChartTooltip': typeof import("../../app/components/ui/chart/ChartTooltip.vue")['default']
+    'Chart': typeof import("../../app/components/ui/chart/index")['default']
+    'ChartInterface': typeof import("../../app/components/ui/chart/interface")['default']
     'Drawer': typeof import("../../app/components/ui/drawer/index")['Drawer']
     'DrawerClose': typeof import("../../app/components/ui/drawer/index")['DrawerClose']
     'DrawerContent': typeof import("../../app/components/ui/drawer/index")['DrawerContent']
@@ -131,6 +146,13 @@ interface _GlobalComponents {
     'LazyBentoGridItem': LazyComponent<typeof import("../../app/components/ui/bento-grid/index")['BentoGridItem']>
     'LazyBorderBeam': LazyComponent<typeof import("../../app/components/ui/border-beam/index")['BorderBeam']>
     'LazyButton': LazyComponent<typeof import("../../app/components/ui/button/index")['Button']>
+    'LazyCard': LazyComponent<typeof import("../../app/components/ui/card/Card.vue")['default']>
+    'LazyCardAction': LazyComponent<typeof import("../../app/components/ui/card/CardAction.vue")['default']>
+    'LazyCardContent': LazyComponent<typeof import("../../app/components/ui/card/CardContent.vue")['default']>
+    'LazyCardDescription': LazyComponent<typeof import("../../app/components/ui/card/CardDescription.vue")['default']>
+    'LazyCardFooter': LazyComponent<typeof import("../../app/components/ui/card/CardFooter.vue")['default']>
+    'LazyCardHeader': LazyComponent<typeof import("../../app/components/ui/card/CardHeader.vue")['default']>
+    'LazyCardTitle': LazyComponent<typeof import("../../app/components/ui/card/CardTitle.vue")['default']>
     'LazyCarousel': LazyComponent<typeof import("../../app/components/ui/carousel/index")['Carousel']>
     'LazyCarouselContent': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselContent']>
     'LazyCarouselItem': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselItem']>
@@ -138,6 +160,14 @@ interface _GlobalComponents {
     'LazyCarouselPrevious': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselPrevious']>
     'LazyCarouselInterface': LazyComponent<typeof import("../../app/components/ui/carousel/interface")['default']>
     'LazyCarouselUseCarousel': LazyComponent<typeof import("../../app/components/ui/carousel/useCarousel")['default']>
+    'LazyChartBarChart': LazyComponent<typeof import("../../app/components/ui/chart-bar/BarChart.vue")['default']>
+    'LazyChartBar': LazyComponent<typeof import("../../app/components/ui/chart-bar/index")['default']>
+    'LazyChartCrosshair': LazyComponent<typeof import("../../app/components/ui/chart/ChartCrosshair.vue")['default']>
+    'LazyChartLegend': LazyComponent<typeof import("../../app/components/ui/chart/ChartLegend.vue")['default']>
+    'LazyChartSingleTooltip': LazyComponent<typeof import("../../app/components/ui/chart/ChartSingleTooltip.vue")['default']>
+    'LazyChartTooltip': LazyComponent<typeof import("../../app/components/ui/chart/ChartTooltip.vue")['default']>
+    'LazyChart': LazyComponent<typeof import("../../app/components/ui/chart/index")['default']>
+    'LazyChartInterface': LazyComponent<typeof import("../../app/components/ui/chart/interface")['default']>
     'LazyDrawer': LazyComponent<typeof import("../../app/components/ui/drawer/index")['Drawer']>
     'LazyDrawerClose': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerClose']>
     'LazyDrawerContent': LazyComponent<typeof import("../../app/components/ui/drawer/index")['DrawerContent']>
