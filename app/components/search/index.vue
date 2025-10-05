@@ -2,15 +2,15 @@
 
     <FluidCursor v-if="!isSearchOpened"></FluidCursor>
 
-    
-    
     <AutoScroll>
         <div class="container px-2 md:px-0 max-w-4xl mt-22 xl:mt-4 pb-36 mx-auto">
-            <Alert class="mb-4">
-                <!-- <Rocket class="h-4 w-4" /> -->
-                <AlertTitle>{{t('commingsoon.title')}}!</AlertTitle>
+            <Alert class="mb-4 flex items-center gap-2">
+                <div>
+                    <Icon name="lucide:timer" />
+                </div>
+                <AlertTitle>{{ t('commingsoon.title') }}!</AlertTitle>
                 <AlertDescription>
-                    {{t('commingsoon.description')}}
+                    {{ t('commingsoon.description') }}
                 </AlertDescription>
             </Alert>
             <!-- <prse><code>{{ JSON.stringify({ chatHistory, searchId: currentSearchId }, null, 4) }}</code></pre> -->
@@ -59,17 +59,6 @@
                 </div>
             </form>
         </ClientOnly>
-        <!-- <div class="flex min-h-64 items-center justify-center">
-            <p class="whitespace-pre-wrap text-xl font-medium tracking-tighter text-black dark:text-white">
-                +<NumberTicker :value="100" /> Produtos
-            </p>
-            <p class="whitespace-pre-wrap text-xl font-medium tracking-tighter text-black dark:text-white">
-                +<NumberTicker :value="100" /> Produtos
-            </p>
-            <p class="whitespace-pre-wrap text-xl font-medium tracking-tighter text-black dark:text-white">
-                +<NumberTicker :value="100" /> Produtos
-            </p>
-        </div> -->
         <div class="text-center mt-4">
             <small class="font-xs opacity-[0.6] text-muted-foreground">&copy; Copyright &middot; Komprai, LLC.</small>
         </div>

@@ -12,65 +12,76 @@
 
         <SeachPlaceholder type="search" v-if="history.request.loading.search"></SeachPlaceholder>
 
+        <div v-if="history.search.done">
 
+            <div class="mb-2">
+                <span>Selecionei algumas ofertas que você pode se interessar:</span>
+            </div>
 
-        <Carousel class="relative w-full" v-if="history.search.done">
-            <CarouselContent>
-                <CarouselItem class="basis-1/1 xs:lg:basis-1/2 lg:basis-1/3">
-                    <small class="text-muted-foreground">{{ t('search.response.sponsored') }} &middot; vendido por Magalu</small>
-                    <Drawer>
-                        <DrawerTrigger><img src="https://s3-sa-east-1.amazonaws.com/images.anymarket.com.br/259051458./C54969EEF12489FF08FDE7BCC02F65C1/original_image.jpg" class="w-full p-1 border-1 rounded-sm" alt=""></DrawerTrigger>
-                        <DrawerContent>
-                            <DrawerHeader>
-                                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-                                <DrawerDescription>This action cannot be undone.</DrawerDescription>
-                            </DrawerHeader>
-                            <DrawerFooter>
-                                <Button>Submit</Button>
-                                <!-- <DrawerClose>
+            <Carousel class="relative w-full">
+                <CarouselContent>
+                    <CarouselItem class="basis-1/2 xs:lg:basis-1/2 lg:basis-1/3">
+                        <small class="text-muted-foreground">{{ t('search.response.sponsored') }} &middot; vendido por Magalu</small>
+                        <Drawer>
+                            <DrawerTrigger><img src="https://s3-sa-east-1.amazonaws.com/images.anymarket.com.br/259051458./C54969EEF12489FF08FDE7BCC02F65C1/original_image.jpg" class="w-full p-1 border-1 rounded-sm" alt=""></DrawerTrigger>
+                            <DrawerContent>
+                                <DrawerHeader>
+                                    <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+                                    <DrawerDescription>This action cannot be undone.</DrawerDescription>
+                                </DrawerHeader>
+                                <DrawerFooter>
+                                    <Button>Submit</Button>
+                                    <!-- <DrawerClose>
                         <Button variant="outline">
                             Cancel
                         </Button>
                     </DrawerClose> -->
-                            </DrawerFooter>
-                        </DrawerContent>
-                    </Drawer>
-
-                    <div class="flex gap-2 my-2">
-                        <Button variant="secondary" class="flex-1">
-                            Comprar <Icon name="lucide:external-link"></Icon>
-                        </Button>
-                    </div>
-                </CarouselItem>
-                <CarouselItem class="basis-1/1 xs:lg:basis-1/2 lg:basis-1/3" v-for="i in 5">
-                    <small class="text-muted-foreground">vendido por Magalu</small>
-                    <Drawer>
-                        <DrawerTrigger><img src="https://s3-sa-east-1.amazonaws.com/images.anymarket.com.br/259051458./0FCAE2E00E70B1260F4F2DCBBDE3B9DD/original_image.jpg" class="w-full p-1 border-1 rounded-sm" alt=""></DrawerTrigger>
-                        <DrawerContent>
-                            <DrawerHeader>
-                                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-                                <DrawerDescription>This action cannot be undone.</DrawerDescription>
-                            </DrawerHeader>
-                            <DrawerFooter>
-                                <Button>Submit</Button>
-                                <!-- <DrawerClose>
+                                </DrawerFooter>
+                            </DrawerContent>
+                        </Drawer>
+                        <div>R$ 2.000,00</div>
+                        <div class="flex gap-2 my-2">
+                            <Button variant="outline" class="flex-1">
+                                Comprar <Icon name="lucide:external-link"></Icon>
+                            </Button>
+                        </div>
+                    </CarouselItem>
+                    <CarouselItem class="basis-1/2 xs:lg:basis-1/2 lg:basis-1/3" v-for="i in 5">
+                        <small class="text-muted-foreground">vendido por Magalu</small>
+                        <Drawer>
+                            <DrawerTrigger><img src="https://s3-sa-east-1.amazonaws.com/images.anymarket.com.br/259051458./0FCAE2E00E70B1260F4F2DCBBDE3B9DD/original_image.jpg" class="w-full p-1 border-1 rounded-sm" alt=""></DrawerTrigger>
+                            <DrawerContent>
+                                <DrawerHeader>
+                                    <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+                                    <DrawerDescription>This action cannot be undone.</DrawerDescription>
+                                </DrawerHeader>
+                                <DrawerFooter>
+                                    <Button>Submit</Button>
+                                    <!-- <DrawerClose>
                         <Button variant="outline">
                             Cancel
                         </Button>
                     </DrawerClose> -->
-                            </DrawerFooter>
-                        </DrawerContent>
-                    </Drawer>
-                    <div class="flex gap-2 my-2">
-                        <Button variant="secondary" class="flex-1">
-                            Comprar <Icon name="lucide:external-link"></Icon>
-                        </Button>
-                    </div>
-                </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious class="hidden lg:inline-flex" />
-            <CarouselNext class="hidden lg:inline-flex" />
-        </Carousel>
+                                </DrawerFooter>
+                            </DrawerContent>
+                        </Drawer>
+                        <div>R$ 2.000,00</div>
+                        <div class="flex gap-2 my-2">
+                            <Button variant="outline" class="flex-1">
+                                Comprar <Icon name="lucide:external-link"></Icon>
+                            </Button>
+                        </div>
+                    </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious class="hidden lg:inline-flex" />
+                <CarouselNext class="hidden lg:inline-flex" />
+            </Carousel>
+
+            <Button variant="secondary" class="mt-2 w-full">
+                Ver todas 20343 para iPhone 17 <Icon name="lucide:search"></Icon>
+            </Button>
+
+        </div>
 
         <!-- <ClientOnly>
             <AnimatedTestimonials v-if="history.search.done" :testimonials="testimonials" />
@@ -79,10 +90,19 @@
         <SeachPlaceholder type="insights" v-if="history.request.loading.insights"></SeachPlaceholder>
 
         <div v-if="history.insights.done" class="my-4">
-            <div class="my-2 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi maxime libero impedit porro? Veritatis numquam pariatur amet inventore facilis repellat praesentium quidem iusto suscipit, quibusdam, explicabo consectetur. Sed, labore.</div>
-            <div class="my-2 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi maxime libero impedit porro? Veritatis numquam pariatur amet inventore facilis repellat praesentium quidem iusto suscipit, quibusdam, explicabo consectetur. Sed, labore.</div>
 
-            <div class="px-2">
+            <div class="mb-4">
+                <small class="text-muted-foreground">
+                    <strong>{{ t('search.response.aiDisclaimer.warning') }}:</strong> {{ t('search.response.aiDisclaimer.description') }}
+                </small>
+            </div>
+
+            <span class="text-xl">Informações sobre o iPhone 17</span>
+
+            <div class="my-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi maxime libero impedit porro? Veritatis numquam pariatur amet inventore facilis repellat praesentium quidem iusto suscipit, quibusdam, explicabo consectetur. Sed, labore.</div>
+            <div class="my-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi maxime libero impedit porro? Veritatis numquam pariatur amet inventore facilis repellat praesentium quidem iusto suscipit, quibusdam, explicabo consectetur. Sed, labore.</div>
+
+            <div class="">
                 <p class="text-zinc-700 dark:text-zinc-300 text-base md:text-lg leading-relaxed">
                     O novo <strong>iPhone 16 Pro</strong> redefine o conceito de desempenho e sofisticação. Construído em titânio de grau aeroespacial, ele combina leveza e resistência com um design impecável.<br><br>
                     Seu <strong>chip A18 Pro</strong> oferece potência absurda e eficiência energética de última geração, enquanto a <strong>tela Super Retina XDR de 6,3 polegadas</strong> com <strong>ProMotion 120 Hz</strong> garante fluidez e cores impressionantes.<br><br>
@@ -91,7 +111,7 @@
                 </p>
             </div>
 
-            <div class="w-1/2 mt-4">
+            <div class="w-full mt-4">
                 <BalanceSlider :right-color="'#ff0000'" :left-color="'#00ff00'" left-content="BOM" right-content="RUIM" :indicator-color="'#0000ff'" />
             </div>
         </div>

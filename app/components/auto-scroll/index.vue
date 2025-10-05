@@ -5,9 +5,12 @@ const containerRef = ref<HTMLElement | null>(null)
 let observer: MutationObserver | null = null
 
 const scrollToBottom = () => {
-  console.log('??')
   if (containerRef.value) {
+    console.log(containerRef.value.scrollTop, containerRef.value.scrollHeight);
+    
     containerRef.value.scrollTop = containerRef.value.scrollHeight
+    if((containerRef.value.scrollHeight - containerRef.value.scrollTop) < 400) {
+    }
   }
 }
 

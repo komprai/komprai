@@ -20,6 +20,9 @@ export const AlertTitle: typeof import("../app/components/ui/alert/index")['Aler
 export const AnimatedTestimonials: typeof import("../app/components/ui/animated-testimonials/index")['AnimatedTestimonials']
 export const Badge: typeof import("../app/components/ui/badge/index")['Badge']
 export const BalanceSlider: typeof import("../app/components/ui/balance-slider/index")['BalanceSlider']
+export const BentoGrid: typeof import("../app/components/ui/bento-grid/index")['BentoGrid']
+export const BentoGridCard: typeof import("../app/components/ui/bento-grid/index")['BentoGridCard']
+export const BentoGridItem: typeof import("../app/components/ui/bento-grid/index")['BentoGridItem']
 export const BorderBeam: typeof import("../app/components/ui/border-beam/index")['BorderBeam']
 export const Button: typeof import("../app/components/ui/button/index")['Button']
 export const Carousel: typeof import("../app/components/ui/carousel/index")['Carousel']
@@ -100,8 +103,8 @@ export const NuxtTime: typeof import("../node_modules/nuxt/dist/app/components/n
 export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
 export const NuxtImg: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
 export const NuxtPicture: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
-export const DropdownMenuPortal: typeof import("../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']
 export const CarouselApi: typeof import("../app/components/ui/carousel/index")['CarouselApi']
+export const DropdownMenuPortal: typeof import("../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']
 export const Icon: typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
 export const NuxtLinkLocale: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
 export const SwitchLocalePathLink: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
@@ -123,6 +126,9 @@ export const LazyAlertTitle: LazyComponent<typeof import("../app/components/ui/a
 export const LazyAnimatedTestimonials: LazyComponent<typeof import("../app/components/ui/animated-testimonials/index")['AnimatedTestimonials']>
 export const LazyBadge: LazyComponent<typeof import("../app/components/ui/badge/index")['Badge']>
 export const LazyBalanceSlider: LazyComponent<typeof import("../app/components/ui/balance-slider/index")['BalanceSlider']>
+export const LazyBentoGrid: LazyComponent<typeof import("../app/components/ui/bento-grid/index")['BentoGrid']>
+export const LazyBentoGridCard: LazyComponent<typeof import("../app/components/ui/bento-grid/index")['BentoGridCard']>
+export const LazyBentoGridItem: LazyComponent<typeof import("../app/components/ui/bento-grid/index")['BentoGridItem']>
 export const LazyBorderBeam: LazyComponent<typeof import("../app/components/ui/border-beam/index")['BorderBeam']>
 export const LazyButton: LazyComponent<typeof import("../app/components/ui/button/index")['Button']>
 export const LazyCarousel: LazyComponent<typeof import("../app/components/ui/carousel/index")['Carousel']>
@@ -203,8 +209,8 @@ export const LazyNuxtTime: LazyComponent<typeof import("../node_modules/nuxt/dis
 export const LazyNuxtRouteAnnouncer: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
 export const LazyNuxtImg: LazyComponent<typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']>
 export const LazyNuxtPicture: LazyComponent<typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']>
-export const LazyDropdownMenuPortal: LazyComponent<typeof import("../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']>
 export const LazyCarouselApi: LazyComponent<typeof import("../app/components/ui/carousel/index")['CarouselApi']>
+export const LazyDropdownMenuPortal: LazyComponent<typeof import("../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']>
 export const LazyIcon: LazyComponent<typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
 export const LazyNuxtLinkLocale: LazyComponent<typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']>
 export const LazySwitchLocalePathLink: LazyComponent<typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']>

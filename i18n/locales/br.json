@@ -20,7 +20,11 @@
       "search": "Pesquisar"
     },
     "response": {
-      "sponsored": "patrocinado"
+      "sponsored": "patrocinado",
+      "aiDisclaimer": {
+        "warning": "Aviso",
+        "description": "as informações abaixo são geradas por inteligencia artificial, podem não ser precisas. Verifique o produto antes de comprar."
+      }
     }
   }
 }
