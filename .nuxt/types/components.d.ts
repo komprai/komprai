@@ -75,6 +75,8 @@ interface _GlobalComponents {
     'GlowBorder': typeof import("../../app/components/ui/glow-border/index")['GlowBorder']
     'GradientButton': typeof import("../../app/components/ui/gradient-button/index")['GradientButton']
     'HaloSearch': typeof import("../../app/components/ui/halo-search/index")['HaloSearch']
+    'InputIInput': typeof import("../../app/components/ui/input/IInput.vue")['default']
+    'Input': typeof import("../../app/components/ui/input/index")['default']
     'Marquee': typeof import("../../app/components/ui/marquee/index")['Marquee']
     'MarqueeReviewCard': typeof import("../../app/components/ui/marquee/ReviewCard.vue")['default']
     'MorphingTabs': typeof import("../../app/components/ui/morphing-tabs/index")['MorphingTabs']
@@ -98,7 +100,7 @@ interface _GlobalComponents {
     'PaginationNext': typeof import("../../app/components/ui/pagination/index")['PaginationNext']
     'PaginationPrevious': typeof import("../../app/components/ui/pagination/index")['PaginationPrevious']
     'RadiantText': typeof import("../../app/components/ui/radiant-text/index")['RadiantText']
-    'ScrollArea': typeof import("../../app/components/ui/scroll-area/ScrollArea.vue")['default']
+    'ScrollArea': typeof import("../../app/components/ui/scroll-area/index")['ScrollArea']
     'ScrollAreaScrollBar': typeof import("../../app/components/ui/scroll-area/ScrollBar.vue")['default']
     'Separator': typeof import("../../app/components/ui/separator/index")['Separator']
     'Skeleton': typeof import("../../app/components/ui/skeleton/index")['Skeleton']
@@ -120,9 +122,11 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
     'NuxtImg': typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
     'NuxtPicture': typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
-    'CarouselApi': typeof import("../../app/components/ui/carousel/index")['CarouselApi']
     'BarChart': typeof import("../../app/components/ui/chart-bar/index")['BarChart']
+    'CarouselApi': typeof import("../../app/components/ui/carousel/index")['CarouselApi']
     'DropdownMenuPortal': typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']
+    'IInput': typeof import("../../app/components/ui/input/index")['IInput']
+    'ScrollBar': typeof import("../../app/components/ui/scroll-area/index")['ScrollBar']
     'Icon': typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
     'NuxtLinkLocale': typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
     'SwitchLocalePathLink': typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
@@ -199,6 +203,8 @@ interface _GlobalComponents {
     'LazyGlowBorder': LazyComponent<typeof import("../../app/components/ui/glow-border/index")['GlowBorder']>
     'LazyGradientButton': LazyComponent<typeof import("../../app/components/ui/gradient-button/index")['GradientButton']>
     'LazyHaloSearch': LazyComponent<typeof import("../../app/components/ui/halo-search/index")['HaloSearch']>
+    'LazyInputIInput': LazyComponent<typeof import("../../app/components/ui/input/IInput.vue")['default']>
+    'LazyInput': LazyComponent<typeof import("../../app/components/ui/input/index")['default']>
     'LazyMarquee': LazyComponent<typeof import("../../app/components/ui/marquee/index")['Marquee']>
     'LazyMarqueeReviewCard': LazyComponent<typeof import("../../app/components/ui/marquee/ReviewCard.vue")['default']>
     'LazyMorphingTabs': LazyComponent<typeof import("../../app/components/ui/morphing-tabs/index")['MorphingTabs']>
@@ -222,7 +228,7 @@ interface _GlobalComponents {
     'LazyPaginationNext': LazyComponent<typeof import("../../app/components/ui/pagination/index")['PaginationNext']>
     'LazyPaginationPrevious': LazyComponent<typeof import("../../app/components/ui/pagination/index")['PaginationPrevious']>
     'LazyRadiantText': LazyComponent<typeof import("../../app/components/ui/radiant-text/index")['RadiantText']>
-    'LazyScrollArea': LazyComponent<typeof import("../../app/components/ui/scroll-area/ScrollArea.vue")['default']>
+    'LazyScrollArea': LazyComponent<typeof import("../../app/components/ui/scroll-area/index")['ScrollArea']>
     'LazyScrollAreaScrollBar': LazyComponent<typeof import("../../app/components/ui/scroll-area/ScrollBar.vue")['default']>
     'LazySeparator': LazyComponent<typeof import("../../app/components/ui/separator/index")['Separator']>
     'LazySkeleton': LazyComponent<typeof import("../../app/components/ui/skeleton/index")['Skeleton']>
@@ -244,9 +250,11 @@ interface _GlobalComponents {
     'LazyNuxtRouteAnnouncer': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
     'LazyNuxtImg': LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']>
     'LazyNuxtPicture': LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']>
-    'LazyCarouselApi': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselApi']>
     'LazyBarChart': LazyComponent<typeof import("../../app/components/ui/chart-bar/index")['BarChart']>
+    'LazyCarouselApi': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselApi']>
     'LazyDropdownMenuPortal': LazyComponent<typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']>
+    'LazyIInput': LazyComponent<typeof import("../../app/components/ui/input/index")['IInput']>
+    'LazyScrollBar': LazyComponent<typeof import("../../app/components/ui/scroll-area/index")['ScrollBar']>
     'LazyIcon': LazyComponent<typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
     'LazyNuxtLinkLocale': LazyComponent<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']>
     'LazySwitchLocalePathLink': LazyComponent<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']>

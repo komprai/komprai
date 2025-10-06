@@ -11,9 +11,11 @@ const scrollToBottom = () => {
 
     // console.log(window.document.body.scrollTop, containerRef.value.scrollHeight);
 
-      const el = document.scrollingElement || document.documentElement
-      el.scrollTo({ top: containerRef.value.scrollHeight, behavior: 'smooth' })
-
+      const el = document.getElementById('auto-scroll-handler') //document.scrollingElement || document.documentElement
+      el?.scrollTo({ top: containerRef.value.scrollHeight, behavior: 'smooth' })
+      
+      const el2 = document.scrollingElement || document.documentElement
+      el2?.scrollTo({ top: containerRef.value.scrollHeight, behavior: 'smooth' })
   }
 }
 

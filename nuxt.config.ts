@@ -3,6 +3,34 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
 
+    app: {
+        head: {
+            meta: [
+                { name: 'apple-mobile-web-app-capable', content: 'yes' },
+                // valores possíveis: 'default', 'black', 'black-translucent'
+                // { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+                // (opcional) cor da barra do navegador (Android/Chrome e alguns iOS)
+                { name: 'theme-color', content: '#ff9933' }
+            ],
+            link: [
+                // (opcional) ícone para “Adicionar à Tela Inicial”
+                // { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon.png' }
+            ],
+            script: [
+                // {
+                //     textContent: `
+                //     const kompraiOpts = {
+                //         projectId: 'seu-id',
+                //         position: 'bottom-right',
+                //         buttonText: 'Kompr.ai'
+                //     };
+                //     // load kompr.ai agent
+                //     (function load() { const s = document.createElement('script'); s.src = 'http://localhost:3000/plugins/agent.js'; s.async = true; s.onload = function () { window.PlugChatVue.init(kompraiOpts); }; document.head.appendChild(s); })();`
+                // }
+            ]
+        }
+    },
+
     devtools: {
         enabled: false
     },

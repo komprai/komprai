@@ -75,6 +75,8 @@ export const FluidCursor: typeof import("../app/components/ui/fluid-cursor/index
 export const GlowBorder: typeof import("../app/components/ui/glow-border/index")['GlowBorder']
 export const GradientButton: typeof import("../app/components/ui/gradient-button/index")['GradientButton']
 export const HaloSearch: typeof import("../app/components/ui/halo-search/index")['HaloSearch']
+export const InputIInput: typeof import("../app/components/ui/input/IInput.vue")['default']
+export const Input: typeof import("../app/components/ui/input/index")['default']
 export const Marquee: typeof import("../app/components/ui/marquee/index")['Marquee']
 export const MarqueeReviewCard: typeof import("../app/components/ui/marquee/ReviewCard.vue")['default']
 export const MorphingTabs: typeof import("../app/components/ui/morphing-tabs/index")['MorphingTabs']
@@ -98,7 +100,7 @@ export const PaginationLast: typeof import("../app/components/ui/pagination/inde
 export const PaginationNext: typeof import("../app/components/ui/pagination/index")['PaginationNext']
 export const PaginationPrevious: typeof import("../app/components/ui/pagination/index")['PaginationPrevious']
 export const RadiantText: typeof import("../app/components/ui/radiant-text/index")['RadiantText']
-export const ScrollArea: typeof import("../app/components/ui/scroll-area/ScrollArea.vue")['default']
+export const ScrollArea: typeof import("../app/components/ui/scroll-area/index")['ScrollArea']
 export const ScrollAreaScrollBar: typeof import("../app/components/ui/scroll-area/ScrollBar.vue")['default']
 export const Separator: typeof import("../app/components/ui/separator/index")['Separator']
 export const Skeleton: typeof import("../app/components/ui/skeleton/index")['Skeleton']
@@ -120,9 +122,11 @@ export const NuxtTime: typeof import("../node_modules/nuxt/dist/app/components/n
 export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
 export const NuxtImg: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
 export const NuxtPicture: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
-export const CarouselApi: typeof import("../app/components/ui/carousel/index")['CarouselApi']
 export const BarChart: typeof import("../app/components/ui/chart-bar/index")['BarChart']
+export const CarouselApi: typeof import("../app/components/ui/carousel/index")['CarouselApi']
 export const DropdownMenuPortal: typeof import("../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']
+export const IInput: typeof import("../app/components/ui/input/index")['IInput']
+export const ScrollBar: typeof import("../app/components/ui/scroll-area/index")['ScrollBar']
 export const Icon: typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
 export const NuxtLinkLocale: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
 export const SwitchLocalePathLink: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
@@ -199,6 +203,8 @@ export const LazyFluidCursor: LazyComponent<typeof import("../app/components/ui/
 export const LazyGlowBorder: LazyComponent<typeof import("../app/components/ui/glow-border/index")['GlowBorder']>
 export const LazyGradientButton: LazyComponent<typeof import("../app/components/ui/gradient-button/index")['GradientButton']>
 export const LazyHaloSearch: LazyComponent<typeof import("../app/components/ui/halo-search/index")['HaloSearch']>
+export const LazyInputIInput: LazyComponent<typeof import("../app/components/ui/input/IInput.vue")['default']>
+export const LazyInput: LazyComponent<typeof import("../app/components/ui/input/index")['default']>
 export const LazyMarquee: LazyComponent<typeof import("../app/components/ui/marquee/index")['Marquee']>
 export const LazyMarqueeReviewCard: LazyComponent<typeof import("../app/components/ui/marquee/ReviewCard.vue")['default']>
 export const LazyMorphingTabs: LazyComponent<typeof import("../app/components/ui/morphing-tabs/index")['MorphingTabs']>
@@ -222,7 +228,7 @@ export const LazyPaginationLast: LazyComponent<typeof import("../app/components/
 export const LazyPaginationNext: LazyComponent<typeof import("../app/components/ui/pagination/index")['PaginationNext']>
 export const LazyPaginationPrevious: LazyComponent<typeof import("../app/components/ui/pagination/index")['PaginationPrevious']>
 export const LazyRadiantText: LazyComponent<typeof import("../app/components/ui/radiant-text/index")['RadiantText']>
-export const LazyScrollArea: LazyComponent<typeof import("../app/components/ui/scroll-area/ScrollArea.vue")['default']>
+export const LazyScrollArea: LazyComponent<typeof import("../app/components/ui/scroll-area/index")['ScrollArea']>
 export const LazyScrollAreaScrollBar: LazyComponent<typeof import("../app/components/ui/scroll-area/ScrollBar.vue")['default']>
 export const LazySeparator: LazyComponent<typeof import("../app/components/ui/separator/index")['Separator']>
 export const LazySkeleton: LazyComponent<typeof import("../app/components/ui/skeleton/index")['Skeleton']>
@@ -244,9 +250,11 @@ export const LazyNuxtTime: LazyComponent<typeof import("../node_modules/nuxt/dis
 export const LazyNuxtRouteAnnouncer: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
 export const LazyNuxtImg: LazyComponent<typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']>
 export const LazyNuxtPicture: LazyComponent<typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']>
-export const LazyCarouselApi: LazyComponent<typeof import("../app/components/ui/carousel/index")['CarouselApi']>
 export const LazyBarChart: LazyComponent<typeof import("../app/components/ui/chart-bar/index")['BarChart']>
+export const LazyCarouselApi: LazyComponent<typeof import("../app/components/ui/carousel/index")['CarouselApi']>
 export const LazyDropdownMenuPortal: LazyComponent<typeof import("../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']>
+export const LazyIInput: LazyComponent<typeof import("../app/components/ui/input/index")['IInput']>
+export const LazyScrollBar: LazyComponent<typeof import("../app/components/ui/scroll-area/index")['ScrollBar']>
 export const LazyIcon: LazyComponent<typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
 export const LazyNuxtLinkLocale: LazyComponent<typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']>
 export const LazySwitchLocalePathLink: LazyComponent<typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']>

@@ -2,83 +2,90 @@
 
     <FluidCursor v-if="!isSearchOpened"></FluidCursor>
 
-    <AutoScroll>
-        <div class="container px-2 md:px-0 max-w-4xl mt-22 xl:mt-4 pb-36 mx-auto">
-            <Alert class="mb-4 flex items-center gap-2">
-                <div>
-                    <Icon name="lucide:timer" />
-                </div>
-                <AlertTitle class="hidden lg:block">{{ t('commingsoon.title') }}!</AlertTitle>
-                <AlertDescription>
-                    {{ t('commingsoon.description') }}
-                </AlertDescription>
-            </Alert>
+    <div class="relative overflow-y-auto min-h-[90dvh] h-[100dvh] md:h-[auto]" id="auto-scroll-handler">
+        <AutoScroll>
+            <div class="container min-h-[90dvh] px-2 lg:px-0 max-w-4xl pt-22 xl:pt-4 pb-8 md:pb-36 mx-auto">
+                <Alert class="mb-4 flex items-center gap-2">
+                    <div>
+                        <Icon name="lucide:timer" />
+                    </div>
+                    <AlertTitle class="hidden lg:block">{{ t('commingsoon.title') }}!</AlertTitle>
+                    <AlertDescription>
+                        {{ t('commingsoon.description') }}
+                    </AlertDescription>
+                </Alert>
 
-            <!-- <prse><code>{{ JSON.stringify({ chat, searchId: currentSearchId }, null, 4) }}</code></pre> -->
-            <SearchResponse v-for="history in chat" :history="history" @done="handleResponse"></SearchResponse>
+                <SearchResponse v-for="history in chat" :history="history" @done="handleResponse"></SearchResponse>
 
-            <NuxtLink to="https://kompr.ai/url/O0mR8IStXGez" v-if="chat.length > 0">compartilhar</NuxtLink>
-        </div>
-    </AutoScroll>
-
-    <div class="input-wrapper bg-white dark:bg-zinc-950 fixed px-2 pb-4 z-[22]" :class="{ 'open': isSearchOpened }">
-        <ClientOnly>
-            <div :class="{ 'mb-8': !isSearchOpened }">
-                <MorphingText v-if="!isSearchOpened" :texts="[
-                    t('kompr.ai'),
-                    t('search.hero.find'),
-                    t('search.hero.compare'),
-                    t('search.hero.buy'),
-                ]" />
+                <NuxtLink to="https://kompr.ai/url/O0mR8IStXGez" v-if="chat.length > 0">compartilhar</NuxtLink>
             </div>
-            <form action="javascript:void" @submit="search">
-                <div className="relative mx-auto h-[50px] w-[100%] lg:w-[80%] overflow-hidden">
-                    <GlowBorder :color="['#A07CFE', '#FE8FB5', '#FFBE7B']" :border-radius="10" />
-                    <div class="h-full bg-white dark:bg-zinc-900 w-full flex gap-4 items-center justify-center px-1.5" style="border: 2px solid #ccc; border-radius: 10px;">
-                        <div>
-                            <DropdownMenu>
-                                <DropdownMenuTrigger as-child>
-                                    <Button variant="outline">
-                                        <Icon name="lucide:plus"></Icon>
-                                    </Button>
-                                </DropdownMenuTrigger>
+        </AutoScroll>
 
-                                <DropdownMenuContent>
-                                    <DropdownMenuLabel>Adicionar mais informações</DropdownMenuLabel>
-                                    <DropdownMenuSeparator />
-                                    <DropdownMenuItem>Incluir link</DropdownMenuItem>
-                                    <DropdownMenuItem>Incluir fotos</DropdownMenuItem>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
+        <div class="input-wrapper bg-background sticky md:fixed px-2 z-[22]" :class="{ 'open': isSearchOpened }">
+            <ClientOnly>
+                <div :class="{ 'mb-8': !isSearchOpened }">
+                    <MorphingText v-if="!isSearchOpened" :texts="[
+                        t('kompr.ai'),
+                        t('search.hero.find'),
+                        t('search.hero.compare'),
+                        t('search.hero.buy'),
+                    ]" />
+                </div>
+                <form action="javascript:void" @submit="search">
+                    <div className="relative mx-auto h-[50px] w-[100%] lg:w-[80%] overflow-hidden">
+                        <GlowBorder :color="['#A07CFE', '#FE8FB5', '#FFBE7B']" :border-radius="10" />
+                        <div class="h-full bg-white dark:bg-zinc-900 w-full flex gap-4 items-center justify-center px-1.5" style="border: 2px solid #ccc; border-radius: 10px;">
+                            <div>
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger as-child>
+                                        <Button variant="outline">
+                                            <Icon name="lucide:plus"></Icon>
+                                        </Button>
+                                    </DropdownMenuTrigger>
 
-                        </div>
-                        <div class="flex-1"><input ref="inputRef" v-model="currentPrompt" :placeholder="t('search.input.placeholder')" class="h-full border-0 outline-0 w-full" type="text"></input></div>
-                        <div>
-                            <Button type="submit" :disabled="currentPrompt.length < 3"><span class="hidden lg:inline">{{ t('search.actions.search') }}</span>
-                                <Icon name="lucide:sparkles"></Icon>
-                            </Button>
+                                    <DropdownMenuContent>
+                                        <DropdownMenuLabel>Adicionar mais informações</DropdownMenuLabel>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuItem>Incluir link</DropdownMenuItem>
+                                        <DropdownMenuItem>Incluir fotos</DropdownMenuItem>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+
+                            </div>
+                            <div class="flex-1"><input ref="inputRef" v-model="currentPrompt" :placeholder="t('search.input.placeholder')" class="h-full border-0 outline-0 w-full" type="text"></input></div>
+                            <div>
+                                <Button type="submit" :disabled="currentPrompt.length < 3"><span class="hidden lg:inline">{{ t('search.actions.search') }}</span>
+                                    <Icon name="lucide:sparkles"></Icon>
+                                </Button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </form>
-        </ClientOnly>
-        <div class="text-center mt-4">
-            <small class="font-xs opacity-[0.6] text-muted-foreground">&copy; Copyright &middot; Komprai, LLC.</small>
+                </form>
+            </ClientOnly>
+            <div class="text-center mt-2 pb-4">
+                <small class="font-xs opacity-[0.6] text-muted-foreground">&copy; Copyright &middot; Komprai, LLC.</small>
+            </div>
         </div>
     </div>
 </template>
 
 <style>
 .input-wrapper {
-    left: 50%;
     width: 90%;
     max-width: 900px;
     bottom: 40%;
-    transform: translateX(-50%);
     transition: all .5s;
+    margin: auto;
+    
+    @media (width >=48rem) {
+        left: 50%;
+        bottom: 50%;
+        transform: translateX(-50%);
+    }
 
     &.open {
-        bottom: 0;
+        bottom: env(safe-area-inset-bottom, 0);
+        padding-bottom: env(safe-area-inset-bottom, 0);
         width: 100%;
         max-width: 100%;
     }

@@ -1531,7 +1531,7 @@ async function errorHandler(error, event) {
 
 const rootDir = "/Users/inonjs/workspace/komprai";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"apple-mobile-web-app-capable","content":"yes"},{"name":"theme-color","content":"#ff9933"}],"link":[],"style":[],"script":[],"noscript":[]};
 
 const appRootTag = "div";
 

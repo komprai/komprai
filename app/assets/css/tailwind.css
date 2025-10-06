@@ -140,6 +140,10 @@
 }
 
 @layer base {
+  html, body {
+  height: 100dvh;
+}
+
   * {
     @apply border-border outline-ring/50;
   }

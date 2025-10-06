@@ -1,8 +1,8 @@
 <template>
-    <div class="fixed top-0 z-[300] w-full bg-white dark:bg-zinc-950 xl:bg-transparent xl:dark:bg-transparent">
+    <div class="fixed top-0 z-[300] w-full bg-white dark:bg-zinc-950 xl:bg-transparent xl:dark:bg-transparent border-b-1 md:border-b-0">
         <div class="flex justify-between gap-4 p-4">
             <div>
-                <div class="flex h-10 gap-2 items-center justify-center">
+                <div class="flex h-10 md:gap-2 items-start md:items-center justify-center flex-col md:flex-row">
                     <a href="/">
                         <!-- <SparklesText class="text-xl font-bold" text="Kompr.ai" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="4" />
                         <Badge>preview</Badge> -->
@@ -12,14 +12,7 @@
                 </div>
             </div>
             <div class="flex items-center gap-2">
-                <button @click="next()">
-                    <i v-if="state === 'dark'" i-carbon-moon inline-block align-middle class="align-middle" />
-                    <i v-if="state === 'light'" i-carbon-sun inline-block align-middle class="align-middle" />
-                    <i v-if="state === 'contrast'" i-carbon-contrast inline-block align-middle class="align-middle" />
-                    <i v-if="state === 'auto'" i-carbon-laptop inline-block align-middle class="align-middle" />
-                    <span class="ml-2 capitalize">{{ state }}</span>
-                </button>
-
+                
                 <DropdownMenu>
                     <DropdownMenuTrigger as-child>
                         <Button variant="outline">
