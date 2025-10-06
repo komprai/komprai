@@ -98,6 +98,8 @@ interface _GlobalComponents {
     'PaginationNext': typeof import("../../app/components/ui/pagination/index")['PaginationNext']
     'PaginationPrevious': typeof import("../../app/components/ui/pagination/index")['PaginationPrevious']
     'RadiantText': typeof import("../../app/components/ui/radiant-text/index")['RadiantText']
+    'ScrollArea': typeof import("../../app/components/ui/scroll-area/ScrollArea.vue")['default']
+    'ScrollAreaScrollBar': typeof import("../../app/components/ui/scroll-area/ScrollBar.vue")['default']
     'Separator': typeof import("../../app/components/ui/separator/index")['Separator']
     'Skeleton': typeof import("../../app/components/ui/skeleton/index")['Skeleton']
     'SparklesText': typeof import("../../app/components/ui/sparkles-text/index")['SparklesText']
@@ -118,8 +120,8 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
     'NuxtImg': typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
     'NuxtPicture': typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
-    'BarChart': typeof import("../../app/components/ui/chart-bar/index")['BarChart']
     'CarouselApi': typeof import("../../app/components/ui/carousel/index")['CarouselApi']
+    'BarChart': typeof import("../../app/components/ui/chart-bar/index")['BarChart']
     'DropdownMenuPortal': typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']
     'Icon': typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
     'NuxtLinkLocale': typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
@@ -220,6 +222,8 @@ interface _GlobalComponents {
     'LazyPaginationNext': LazyComponent<typeof import("../../app/components/ui/pagination/index")['PaginationNext']>
     'LazyPaginationPrevious': LazyComponent<typeof import("../../app/components/ui/pagination/index")['PaginationPrevious']>
     'LazyRadiantText': LazyComponent<typeof import("../../app/components/ui/radiant-text/index")['RadiantText']>
+    'LazyScrollArea': LazyComponent<typeof import("../../app/components/ui/scroll-area/ScrollArea.vue")['default']>
+    'LazyScrollAreaScrollBar': LazyComponent<typeof import("../../app/components/ui/scroll-area/ScrollBar.vue")['default']>
     'LazySeparator': LazyComponent<typeof import("../../app/components/ui/separator/index")['Separator']>
     'LazySkeleton': LazyComponent<typeof import("../../app/components/ui/skeleton/index")['Skeleton']>
     'LazySparklesText': LazyComponent<typeof import("../../app/components/ui/sparkles-text/index")['SparklesText']>
@@ -240,8 +244,8 @@ interface _GlobalComponents {
     'LazyNuxtRouteAnnouncer': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
     'LazyNuxtImg': LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']>
     'LazyNuxtPicture': LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']>
-    'LazyBarChart': LazyComponent<typeof import("../../app/components/ui/chart-bar/index")['BarChart']>
     'LazyCarouselApi': LazyComponent<typeof import("../../app/components/ui/carousel/index")['CarouselApi']>
+    'LazyBarChart': LazyComponent<typeof import("../../app/components/ui/chart-bar/index")['BarChart']>
     'LazyDropdownMenuPortal': LazyComponent<typeof import("../../app/components/ui/dropdown-menu/index")['DropdownMenuPortal']>
     'LazyIcon': LazyComponent<typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
     'LazyNuxtLinkLocale': LazyComponent<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']>

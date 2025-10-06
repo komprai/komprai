@@ -6,11 +6,14 @@ let observer: MutationObserver | null = null
 
 const scrollToBottom = () => {
   if (containerRef.value) {
-    console.log(containerRef.value.scrollTop, containerRef.value.scrollHeight);
-    
-    containerRef.value.scrollTop = containerRef.value.scrollHeight
-    if((containerRef.value.scrollHeight - containerRef.value.scrollTop) < 400) {
-    }
+    // window.document.body.scrollTo({top: containerRef.value.scrollHeight});
+    // window.document.body.scrollTop = containerRef.value.scrollHeight;
+
+    // console.log(window.document.body.scrollTop, containerRef.value.scrollHeight);
+
+      const el = document.scrollingElement || document.documentElement
+      el.scrollTo({ top: containerRef.value.scrollHeight, behavior: 'smooth' })
+
   }
 }
 
@@ -34,8 +37,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div ref="containerRef" class="h-[85vh] lg:h-[90vh] w-full overflow-y-auto scroll-smooth">
-    <!-- Conteúdo dinâmico -->
+  <div ref="containerRef">
     <slot />
   </div>
 </template>

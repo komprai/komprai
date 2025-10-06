@@ -25,6 +25,7 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: {
+            NUXT_PUBLIC_BACKEND_BASE: process.env.NUXT_PUBLIC_BACKEND_BASE,
             I18N_MODE: 'prefix',
             BASE_URL: 'http://kompr.ai.local'
         }

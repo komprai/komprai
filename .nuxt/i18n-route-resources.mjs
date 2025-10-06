@@ -4,6 +4,10 @@ export const pathToI18nConfig = {
     "br": "/",
     "en": "/"
   },
+  "/teste": {
+    "br": "/teste",
+    "en": "/teste"
+  },
   "/landing": {
     "br": "/landing",
     "en": "/landing"
@@ -11,6 +15,14 @@ export const pathToI18nConfig = {
   "/url/:id()": {
     "br": "/url/:id()",
     "en": "/url/:id()"
+  },
+  "/access/login": {
+    "br": "/access/login",
+    "en": "/access/login"
+  },
+  "/access/signup": {
+    "br": "/access/signup",
+    "en": "/access/signup"
   },
   "/chat/:searchId()": {
     "br": "/chat/:searchId()",
@@ -23,8 +35,11 @@ export const pathToI18nConfig = {
 };
 export const i18nPathToPath = {
   "/": "/",
+  "/teste": "/teste",
   "/landing": "/landing",
   "/url/:id()": "/url/:id()",
+  "/access/login": "/access/login",
+  "/access/signup": "/access/signup",
   "/chat/:searchId()": "/chat/:searchId()",
   "/url/redirect/:storeId()": "/url/redirect/:storeId()"
 };

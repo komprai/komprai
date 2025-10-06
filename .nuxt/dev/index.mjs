@@ -1096,6 +1096,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
+    "NUXT_PUBLIC_BACKEND_BASE": "http://localhost:4000",
     "I18N_MODE": "prefix",
     "BASE_URL": "http://kompr.ai.local",
     "i18n": {
@@ -1950,19 +1951,44 @@ const pathToI18nConfig = {
     "br": "/",
     "en": "/"
   },
+  "/teste": {
+    "br": "/teste",
+    "en": "/teste"
+  },
   "/landing": {
     "br": "/landing",
     "en": "/landing"
   },
-  "/s/:searchId()": {
-    "br": "/s/:searchId()",
-    "en": "/s/:searchId()"
+  "/url/:id()": {
+    "br": "/url/:id()",
+    "en": "/url/:id()"
+  },
+  "/access/login": {
+    "br": "/access/login",
+    "en": "/access/login"
+  },
+  "/access/signup": {
+    "br": "/access/signup",
+    "en": "/access/signup"
+  },
+  "/chat/:searchId()": {
+    "br": "/chat/:searchId()",
+    "en": "/chat/:searchId()"
+  },
+  "/url/redirect/:storeId()": {
+    "br": "/url/redirect/:storeId()",
+    "en": "/url/redirect/:storeId()"
   }
 };
 const i18nPathToPath = {
   "/": "/",
+  "/teste": "/teste",
   "/landing": "/landing",
-  "/s/:searchId()": "/s/:searchId()"
+  "/url/:id()": "/url/:id()",
+  "/access/login": "/access/login",
+  "/access/signup": "/access/signup",
+  "/chat/:searchId()": "/chat/:searchId()",
+  "/url/redirect/:storeId()": "/url/redirect/:storeId()"
 };
 
 const matcher = createRouterMatcher([], {});

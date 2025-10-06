@@ -19,6 +19,8 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
    },
   }
   interface SharedPublicRuntimeConfig {
+   NUXT_PUBLIC_BACKEND_BASE: string,
+
    I18N_MODE: string,
 
    BASE_URL: string,

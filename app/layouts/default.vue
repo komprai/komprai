@@ -28,10 +28,8 @@
                     </DropdownMenuTrigger>
 
                     <DropdownMenuContent>
-                        <DropdownMenuLabel>Adicionar mais informações</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>Incluir link</DropdownMenuItem>
-                        <DropdownMenuItem>Incluir fotos</DropdownMenuItem>
+                        <DropdownMenuItem @click="switchMode('dark')">dark</DropdownMenuItem>
+                        <DropdownMenuItem @click="switchMode('light')">light</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
 
@@ -39,6 +37,21 @@
                     <DropdownMenuTrigger as-child>
                         <Button variant="outline">
                             <Icon name="lucide:globe"></Icon>
+                        </Button>
+                    </DropdownMenuTrigger>
+
+                    <DropdownMenuContent>
+                        <DropdownMenuLabel>Adicionar mais informações</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <NuxtLink :to="$switchLocalePath('en')">English</NuxtLink>
+                        <NuxtLink :to="$switchLocalePath('br')">Portuguese BR</NuxtLink>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+
+                <DropdownMenu>
+                    <DropdownMenuTrigger as-child>
+                        <Button variant="outline">
+                            <Icon name="lucide:user"></Icon>
                         </Button>
                     </DropdownMenuTrigger>
 
@@ -60,22 +73,26 @@
 <script setup lang="ts">
 import { watchEffect } from 'vue'
 
-import { useColorMode, useCycleList } from '@vueuse/core'
+import { useColorMode, useCycleList, type BasicColorMode } from '@vueuse/core'
 
 const host = useState<string>('host');
 
 useHead({ title: "Kompr.ai" });
 
-const mode = useColorMode({
+const currentMode = useColorMode({
     emitAuto: true,
     modes: {
         contrast: 'dark contrast'
     },
-})
+});
 
-const { state, next } = useCycleList(['dark', 'light', 'auto'] as const, { initialValue: mode })
+function switchMode(mode: BasicColorMode) {
+    currentMode.value = mode;
+}
 
-watchEffect(() => mode.value = state.value);
+// const { state, next } = useCycleList(['dark', 'light', 'auto'] as const, { initialValue: mode })
+
+// watchEffect(() => );
 
 const { data, error, pending } = await useFetch('https://api.example.com/posts', {
     query: { host: host.value }, 
