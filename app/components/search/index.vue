@@ -21,7 +21,7 @@
         </div>
     </AutoScroll>
 
-    <div class="input-wrapper fixed p-2 mb-4 z-[22]" :class="{ 'open': isSearchOpened }">
+    <div class="input-wrapper bg-white dark:bg-zinc-950 fixed px-2 pb-4 z-[22]" :class="{ 'open': isSearchOpened }">
         <ClientOnly>
             <div :class="{ 'mb-8': !isSearchOpened }">
                 <MorphingText v-if="!isSearchOpened" :texts="[
@@ -34,7 +34,7 @@
             <form action="javascript:void" @submit="search">
                 <div className="relative mx-auto h-[50px] w-[100%] lg:w-[80%] overflow-hidden">
                     <GlowBorder :color="['#A07CFE', '#FE8FB5', '#FFBE7B']" :border-radius="10" />
-                    <div class="h-full bg-white dark:bg-black w-full flex gap-4 items-center justify-center px-1.5" style="border: 2px solid #ccc; border-radius: 10px;">
+                    <div class="h-full bg-white dark:bg-zinc-900 w-full flex gap-4 items-center justify-center px-1.5" style="border: 2px solid #ccc; border-radius: 10px;">
                         <div>
                             <DropdownMenu>
                                 <DropdownMenuTrigger as-child>
